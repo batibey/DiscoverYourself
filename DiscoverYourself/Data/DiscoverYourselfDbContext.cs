@@ -5,10 +5,12 @@ namespace DiscoverYourself.Data;
 
 public class DiscoverYourselfDbContext : DbContext
 {
-    public DiscoverYourselfDbContext(DbContextOptions<DiscoverYourselfDbContext> options)
-        : base(options)
-    {
-    }
-
     public DbSet<User> Users { get; set; }
+
+    public DiscoverYourselfDbContext(DbContextOptions<DiscoverYourselfDbContext> options) : base(options) { }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<User>().HasIndex(u => u.Email).IsUnique();
+    }
 }
