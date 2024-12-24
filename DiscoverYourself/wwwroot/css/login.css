@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #001f3f; 
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+.login-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px; 
+    margin: auto; 
+}
+
+.neon-input,
+.neon-button {
+    display: block;
+    width: calc(100% - 20px); 
+    max-width: 360px; 
+    height: 45px; 
+    padding: 10px;
+    margin: 10px auto; 
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.neon-input {
+    border: 2px solid #39ff14;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+}
+
+.neon-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
+.neon-button {
+    background-color: lightskyblue; 
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.neon-button:hover {
+    background-color: #00d4ff; 
+    box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+}

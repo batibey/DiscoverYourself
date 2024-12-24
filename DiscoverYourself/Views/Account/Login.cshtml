@@ -1,6 +1,24 @@
 ﻿@model dynamic
-<form asp-action="Login" method="post">
-    <input type="email" name="email" placeholder="Email" required />
-    <input type="password" name="password" placeholder="Password" required />
-    <button type="submit">Login</button>
-</form>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true">
+</head>
+<body>
+<div class="login-container">
+    <h1>Login</h1>
+    <form asp-action="Login" method="post">
+        <input type="email" name="email" placeholder="Email" class="neon-input" required />
+        <input type="password" name="password" placeholder="Password" class="neon-input" required />
+        <button type="submit" class="neon-button">Login</button>
+    </form>
+</div>
+</body>
+</html>
