@@ -16,6 +16,7 @@
 
     <ItemGroup>
       <None Include="wwwroot\css\login.css" />
+      <None Include="wwwroot\css\register.css" />
     </ItemGroup>
 
 </Project>
