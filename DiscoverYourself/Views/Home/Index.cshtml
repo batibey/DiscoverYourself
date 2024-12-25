@@ -1,111 +1,26 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = null;
 }
-
-<style>
-    .futuristic-home {
-        background: linear-gradient(135deg, #1e1f29, #2a2b3a);
-        color: #fff;
-        font-family: 'Roboto', sans-serif;
-        padding: 20px;
-    }
-
-    .header {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .header h1 {
-        font-size: 2.5rem;
-        color: #0ef;
-    }
-
-    .header p {
-        font-size: 1.2rem;
-        color: #aaa;
-    }
-
-    .blog-section {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .user-profile {
-        text-align: center;
-    }
-
-    .profile-pic {
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        margin-bottom: 15px;
-    }
-
-    .publish-btn {
-        background: #0ef;
-        color: #000;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-    }
-
-    .publish-btn:hover {
-        background: #0cf;
-    }
-
-    .carousel {
-        text-align: center;
-        max-width: 500px;
-    }
-
-    .carousel h2 {
-        margin-bottom: 15px;
-        font-size: 1.5rem;
-        color: #0ef;
-    }
-
-    .carousel-items {
-        display: flex;
-        gap: 10px;
-        overflow-x: auto;
-    }
-
-    .carousel-item {
-        background: #333;
-        border: 1px solid #0ef;
-        padding: 15px;
-        border-radius: 5px;
-        min-width: 150px;
-        text-align: center;
-        color: #fff;
-    }
-
-    .carousel-item:hover {
-        background: #444;
-    }
-</style>
-
-<div class="text-center futuristic-home">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="~/css/home_index.css" asp-append-version="true">
+</head>
+<div class="text-center">
     <div class="header">
-        <h1 class="display-4">Welcome to the Future of Blogging</h1>
-        <p>Share your stories with the world in a vibrant and exciting way!</p>
-    </div>
-    <div class="blog-section">
+        <h1 class="display-4">Welcome to the Discover Yourself</h1>
+        <p>Discover yourself by setting your goals and share them with the world !</p>
         <div class="user-profile">
             <img src="https://i.hizliresim.com/bgtjosy.jpeg" alt="User Profile" class="profile-pic">
-            <button class="publish-btn">Publish Your Blog</button>
         </div>
-        <div class="carousel">
-            <h2>Trending Blogs</h2>
-            <div class="carousel-items">
-                <div class="carousel-item">Blog Post 1</div>
-                <div class="carousel-item">Blog Post 2</div>
-                <div class="carousel-item">Blog Post 3</div>
-            </div>
-        </div>
+    </div>
+    <div class="blog-section">
+        <button class="target-btn">Birikim Hedeflerim</button>
+        <button class="target-btn">Yatırım Hedeflerim</button>
+        <button class="target-btn">Eğitim Hedeflerim</button>
+        <button class="target-btn">Gelişim Hedeflerim</button>
     </div>
 </div>
 
