@@ -1,0 +1,105 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accumulation Goals</title>
+    <script src="~/js/chart.js"></script>
+    <link rel="stylesheet" href="~/css/accumulation_goals.css" asp-append-version="true">
+</head>
+<body>
+<div class="container">
+    <h1>Accumulation Goals</h1>
+
+    <!-- Hedef Yatırımlar -->
+    <div class="section">
+        <div class="section-title">Goals</div>
+        <div class="form-group">
+            <label for="targetCurrencyInput">Hedef Döviz Yatırımı (₺):</label>
+            <input type="number" id="targetCurrencyInput" placeholder="Hedef döviz miktarını giriniz">
+        </div>
+        <div class="form-group">
+            <label for="targetGoldInput">Hedef Altın Yatırımı (₺):</label>
+            <input type="number" id="targetGoldInput" placeholder="Hedef altın miktarını giriniz">
+        </div>
+        <div class="form-group">
+            <label for="targetSilverInput">Hedef Gümüş Yatırımı (₺):</label>
+            <input type="number" id="targetSilverInput" placeholder="Hedef gümüş miktarını giriniz">
+        </div>
+    </div>
+
+    <!-- Yapılan Yatırımlar -->
+    <div class="section">
+        <div class="section-title">Realized</div>
+        <div class="form-group">
+            <label for="actualCurrencyInput">Gerçekleşen Döviz Yatırımı (₺):</label>
+            <input type="number" id="actualCurrencyInput" placeholder="Yapılan döviz miktarını giriniz">
+        </div>
+        <div class="form-group">
+            <label for="actualGoldInput">Gerçekleşen Altın Yatırımı (₺):</label>
+            <input type="number" id="actualGoldInput" placeholder="Yapılan altın miktarını giriniz">
+        </div>
+        <div class="form-group">
+            <label for="actualSilverInput">Gerçekleşen Gümüş Yatırımı (₺):</label>
+            <input type="number" id="actualSilverInput" placeholder="Yapılan gümüş miktarını giriniz">
+        </div>
+        <button class="btn" onclick="updateChart()">Grafiği Güncelle</button>
+    </div>
+
+    <!-- Grafik -->
+    <div class="chart-container">
+        <canvas id="investmentChart"></canvas>
+    </div>
+</div>
+
+<script>
+    const ctx = document.getElementById('investmentChart').getContext('2d');
+    const investmentChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Döviz', 'Altın', 'Gümüş'],
+            datasets: [
+                {
+                    label: 'Hedef Yatırım (₺)',
+                    data: [0, 0, 0],
+                    backgroundColor: 'rgba(0, 123, 255, 0.6)',
+                    borderColor: 'rgba(0, 123, 255, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Gerçekleşen Yatırım (₺)',
+                    data: [0, 0, 0],
+                    backgroundColor: 'rgba(40, 167, 69, 0.6)',
+                    borderColor: 'rgba(40, 167, 69, 1)',
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    function updateChart() {
+        const targetCurrency = parseFloat(document.getElementById('targetCurrencyInput').value) || 0;
+        const targetGold = parseFloat(document.getElementById('targetGoldInput').value) || 0;
+        const targetSilver = parseFloat(document.getElementById('targetSilverInput').value) || 0;
+
+        const actualCurrency = parseFloat(document.getElementById('actualCurrencyInput').value) || 0;
+        const actualGold = parseFloat(document.getElementById('actualGoldInput').value) || 0;
+        const actualSilver = parseFloat(document.getElementById('actualSilverInput').value) || 0;
+
+        investmentChart.data.datasets[0].data = [targetCurrency, targetGold, targetSilver];
+        investmentChart.data.datasets[1].data = [actualCurrency, actualGold, actualSilver];
+        investmentChart.update();
+    }
+</script>
+</body>
+</html>
