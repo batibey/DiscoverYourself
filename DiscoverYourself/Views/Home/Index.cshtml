@@ -1,6 +1,10 @@
-﻿@{
+﻿@model DiscoverYourself.Models.Entities.User
+
+@{
     ViewData["Title"] = "Home Page";
     Layout = null;
+    var userName = Model.UserName;
+    var userId = Model.Id;
 }
 <head>
     <meta charset="UTF-8">
@@ -10,14 +14,14 @@
 </head>
 <div class="text-center">
     <div class="header">
-        <h1 class="display-4">Welcome to the Discover Yourself</h1>
+        <h1 class="display-4">Welcome to @userName</h1>
         <p>Discover yourself by setting your goals and share them with the world !</p>
         <div class="user-profile">
             <img src="https://i.hizliresim.com/bgtjosy.jpeg" alt="User Profile" class="profile-pic">
         </div>
     </div>
     <div class="blog-section">
-        <a href="/AccumulationGoals/Index/" class="target-btn">Accumulation Goals</a>
+        <a href="/AccumulationGoals/Index/@userId" class="target-btn">Accumulation Goals</a>
         <button href="" class="target-btn">Yatırım Hedeflerim</button>
         <button href="" class="target-btn">Eğitim Hedeflerim</button>
         <button href="" class="target-btn">Gelişim Hedeflerim</button>

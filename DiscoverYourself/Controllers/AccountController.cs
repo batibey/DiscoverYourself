@@ -20,6 +20,7 @@ public class AccountController : Controller
     public async Task<IActionResult> Login(string email, string password)
     {
         var user = await _context.Users.SingleOrDefaultAsync(u => u.Email == email);
+        
         if (user == null || !VerifyPasswordHash(password, user.PasswordHash))
         {
             ModelState.AddModelError(string.Empty, "Invalid login attempt.");
@@ -28,7 +29,7 @@ public class AccountController : Controller
 
         // Set session or token
         HttpContext.Session.SetString("UserId", user.Id.ToString());
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("Index", "Home", user);
     }
 
     public IActionResult Register() => View();

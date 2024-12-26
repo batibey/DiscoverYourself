@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using DiscoverYourself.Models;
+using DiscoverYourself.Models.Entities;
 
 namespace DiscoverYourself.Controllers;
 
@@ -13,9 +14,9 @@ public class HomeController : Controller
         _logger = logger;
     }
     [Authorize]
-    public IActionResult Index()
+    public IActionResult Index(User user)
     {
-        return View();
+        return View(user);
     }
     [Authorize]
     public IActionResult Privacy()
