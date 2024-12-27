@@ -33,7 +33,7 @@ public class AccumulationGoalsController : Controller
 
         try
         {
-            var userId = model.UserId;
+            var userId = Convert.ToInt32(HttpContext.Session.GetString("UserId"));
             var investmentGoal = new InvestmentGoal
             {
                 ActualSilver = model.ActualSilver,
@@ -43,7 +43,7 @@ public class AccumulationGoalsController : Controller
                 TargetGold = model.TargetGold,
                 TargetSilver = model.TargetSilver,
                 Date = model.Date,
-                UserId = model.UserId
+                UserId = userId
             };
             
             // Veritabanına kaydet
