@@ -48,7 +48,7 @@ public class BusinessGoalsController : Controller
             _context.BusinessGoals.Add(businessGoals);
             _context.SaveChanges();
             
-            TempData["SuccessMessage"] = "Birikim hedefleri başarıyla kaydedildi!";
+            TempData["SuccessMessage"] = "İş hedefleri başarıyla kaydedildi!";
             return RedirectToAction("Index", new { id = userId });
         }
         catch (Exception ex)
