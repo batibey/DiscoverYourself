@@ -1,0 +1,61 @@
+@using DiscoverYourself.Models.Enums
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model DiscoverYourself.Models.RequestModels.BusinessGoalRequestModel
+@{
+    Layout = null;
+    var userId =  ViewBag.UserId;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Business Goals</title>
+    <link rel="stylesheet" href="~/css/business_goals.css" asp-append-version="true">
+</head>
+<body>
+<div class="container">
+    <h1>Business Goals</h1>
+    
+    <form action="/BusinessGoals/Save" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" id="userId" name="UserId" value="@userId">
+
+        <div>
+            <label>Start Date</label>
+            <input asp-for="StartDate" type="date" />
+        </div>
+        <div>
+            <label>End Date</label>
+            <input asp-for="EndDate" type="date" />
+        </div>
+        <div>
+            <label>Tasks Completed</label>
+            <input asp-for="TasksCompleted" type="number" />
+        </div>
+        <div>
+            <label>Task Type</label>
+            <select asp-for="TaskType">
+                @foreach (var taskType in Enum.GetValues(typeof(enmTaskTypes)))
+                {
+                    <option value="@taskType">@taskType</option>
+                }
+            </select>
+        </div>
+        <div>
+            <label>Daily Work Hours</label>
+            <input asp-for="DailyWorkHours" type="number" step="0.5" />
+        </div>
+        <div>
+            <label>Daily Self-Development Hours</label>
+            <input asp-for="DailySelfDevelopmentHours" type="number" step="0.5" />
+        </div>
+        <div>
+            <label>Additional Info</label>
+            <textarea asp-for="AdditionalInfo"></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary mt-3">Save</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 @{
     Layout = null;
-    var UserId =  ViewBag.UserId;
+    var userId =  ViewBag.UserId;
 }
 
 <!DOCTYPE html>
@@ -13,12 +13,12 @@
 <body>
 <div class="container">
     <h1>Accumulation Goals</h1>
-    
+
     <form action="/AccumulationGoals/Save" method="post">
         @Html.AntiForgeryToken()
-        <input type="hidden" id="userId" name="UserId" value="@UserId">
+        <input type="hidden" id="userId" name="UserId" value="@userId">
         <div class="form-group">
-            <label for="dateInput">Tarih:</label>
+            <label for="dateInput">Date:</label>
             <input type="date" id="dateInput" name="Date" required>
         </div>
 
@@ -54,13 +54,15 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary mt-3">Kaydet</button>
+        <button type="submit" class="btn btn-primary mt-3">Save</button>
+        <button type="button" class="btn btn-secondary mt-3" onclick="updateChart()">Update Chart</button>
     </form>
-    
+
     <div class="chart-container mt-5">
         <canvas id="investmentChart"></canvas>
     </div>
 </div>
+
 
 <script>
     const ctx = document.getElementById('investmentChart').getContext('2d');

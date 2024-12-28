@@ -20,4 +20,8 @@
       <None Include="wwwroot\css\register.css" />
     </ItemGroup>
 
+    <ItemGroup>
+      <AdditionalFiles Include="Views\BusinessGoals\Index.cshtml" />
+    </ItemGroup>
+
 </Project>
