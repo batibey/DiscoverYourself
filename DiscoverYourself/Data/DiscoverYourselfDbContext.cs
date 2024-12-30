@@ -8,6 +8,7 @@ public class DiscoverYourselfDbContext : DbContext
     public DbSet<User> Users { get; set; }
     public DbSet<InvestmentGoal> InvestmentGoals { get; set; }
     public DbSet<BusinessGoal> BusinessGoals { get; set; }
+    public DbSet<EducationGoal> EducationGoals { get; set; }
 
     public DiscoverYourselfDbContext(DbContextOptions<DiscoverYourselfDbContext> options) : base(options) { }
 
@@ -16,5 +17,6 @@ public class DiscoverYourselfDbContext : DbContext
         modelBuilder.Entity<User>().HasIndex(u => u.Email).IsUnique();
         modelBuilder.Entity<InvestmentGoal>().HasIndex(u => u.Id).IsUnique();
         modelBuilder.Entity<BusinessGoal>().HasIndex(u => u.Id).IsUnique();
+        modelBuilder.Entity<EducationGoal>().HasIndex(u => u.Id).IsUnique();
     }
 }
