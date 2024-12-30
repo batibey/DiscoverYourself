@@ -12,7 +12,7 @@ public class EducationGoal
     public List<string> Topics { get; set; } // Hedefte ele alınacak konular (Örn: Liderlik, İletişim)
     public enmDifficultyLevel Difficulty { get; set; } // Hedefin zorluk seviyesi (Enum olarak tanımlanabilir)
     public string TargetAudience { get; set; } // Hedeflenen kitle (Örn: Yeni mezunlar, yöneticiler)
-    public string Milestones { get; set; } // Hedefe ulaşmak için belirlenen ara adımlar
+    public List<string> Milestones { get; set; } // Hedefe ulaşmak için belirlenen ara adımlar
     public string SuccessCriteria { get; set; } // Hedefin başarı ölçütü (Örn: Bir sertifika almak)
     public bool IsCompleted { get; set; } // Hedef tamamlandı mı?
 }
