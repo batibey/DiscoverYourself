@@ -25,4 +25,8 @@
       <AdditionalFiles Include="Views\BusinessGoals\Index.cshtml" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Resources\" />
+    </ItemGroup>
+
 </Project>
