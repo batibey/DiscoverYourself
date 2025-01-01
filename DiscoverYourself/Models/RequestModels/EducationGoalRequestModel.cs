@@ -13,4 +13,5 @@ public class EducationGoalRequestModel
     public string TargetAudience { get; set; } // Hedeflenen kitle
     public List<string> Milestones { get; set; } // Ara adımlar
     public string SuccessCriteria { get; set; } // Başarı ölçütü
+    public bool IsCompleted { get; set; } // Tamamlandı mı ?
 }
