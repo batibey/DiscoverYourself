@@ -1,6 +1,6 @@
 @using DiscoverYourself.Models.Enums
 @using Microsoft.AspNetCore.Mvc.TagHelpers
-@model DiscoverYourself.Models.RequestModels.BusinessGoalRequestModel
+@model DiscoverYourself.Models.RequestModels.EducationGoalRequestModel
 @{
     Layout = null;
     var userId =  ViewBag.UserId;
@@ -9,53 +9,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Business Goals</title>
-    <link rel="stylesheet" href="~/css/business_goals.css" asp-append-version="true">
+    <title>Education Goals</title>
+    <link rel="stylesheet" href="~/css/education_goals.css" asp-append-version="true">
 </head>
 <body>
 <div class="container">
-    <h1>Business Goals</h1>
-    
+    <h1>Education Goals</h1>
+
     <form action="/EducationGoals/Save" method="post">
         @Html.AntiForgeryToken()
         <input type="hidden" id="userId" name="UserId" value="@userId">
+        <div>
+            <label for="Title">Title</label>
+            <input type="text" class="form-control" id="Title" name="Title" required/>
+        </div>
 
         <div>
-            <label>Start Date</label>
-            <input asp-for="StartDate" type="date" />
+            <label for="Description">Description</label>
+            <textarea class="form-control" id="Description" name="Description" rows="2" required></textarea>
+        </div>
+
+        <div>
+            <label for="StartDate">Start Date</label>
+            <input type="date" class="form-control" id="StartDate" name="StartDate" required/>
+        </div>
+
+        <div>
+            <label for="EndDate">End Date</label>
+            <input type="date" class="form-control" id="EndDate" name="EndDate" required/>
         </div>
         <div>
-            <label>End Date</label>
-            <input asp-for="EndDate" type="date" />
-        </div>
-        <div>
-            <label>Tasks Completed</label>
-            <input asp-for="TasksCompleted" type="number" min="0"/>
-        </div>
-        <div>
-            <label>Task Type</label>
-            <select asp-for="TaskType">
-                @foreach (var taskType in Enum.GetValues(typeof(enmTaskTypes)))
+            <label>Topics</label>
+            <select asp-for="Topics">
+                @foreach (var topics in Enum.GetValues(typeof(enmTopics)))
                 {
-                    <option value="@taskType">@taskType</option>
+                    <option value="@topics">@topics</option>
                 }
             </select>
         </div>
         <div>
-            <label>Daily Work Hours</label>
-            <input asp-for="DailyWorkHours" type="number" step="0.5" min="0" />
+            <label>Difficulty</label>
+            <select asp-for="Difficulty">
+                @foreach (var difficulty in Enum.GetValues(typeof(enmDifficultyLevel)))
+                {
+                    <option value="@difficulty">@difficulty</option>
+                }
+            </select>
+        </div>
+
+        <div>
+            <label for="TargetAudience">Target Audience</label>
+            <input type="text" class="form-control" id="TargetAudience" name="TargetAudience" required/>
+        </div>
+
+        <div>
+            <label for="Milestones">Mile Stones</label>
+            <textarea class="form-control" id="Milestones" name="Milestones" rows="3"></textarea>
+        </div>
+
+        <div>
+            <label for="SuccessCriteria">Success Criteria</label>
+            <textarea class="form-control" id="SuccessCriteria" name="SuccessCriteria" rows="3" required></textarea>
         </div>
         <div>
-            <label>Daily Self-Development Hours</label>
-            <input asp-for="DailySelfDevelopmentHours" type="number" step="0.5" min="0" />
+            <input type="hidden" name="IsCompleted" id="IsCompletedHidden" value="false" />
+            <input type="checkbox"
+                   class="form-check-input"
+                   id="IsCompletedCheckbox"
+                   value="true"
+                   @(Model?.IsCompleted == true ? "checked" : "") />
+            <label class="form-check-label" for="IsCompletedCheckbox">Is Complete</label>
         </div>
-        <div>
-            <label>Additional Info</label>
-            <textarea asp-for="AdditionalInfo"></textarea>
-        </div>
-        
+
         <button type="submit" class="btn btn-primary mt-3">Save</button>
     </form>
+
 </div>
 </body>
+
+<script>
+    document.getElementById("IsCompletedCheckbox").addEventListener("change", function () {
+        // Checkbox checked durumuna göre hidden input'u güncelle
+        document.getElementById("IsCompletedHidden").value = this.checked ? "true" : "false";
+    });
+</script>
 </html>

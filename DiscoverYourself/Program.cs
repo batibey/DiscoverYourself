@@ -1,3 +1,4 @@
+using System.Globalization;
 using DiscoverYourself.Data;
 using Microsoft.EntityFrameworkCore;
 using DiscoverYourself.Managers;
@@ -18,6 +19,11 @@ builder.Services.AddSession(options =>
 // Configure Entity Framework and database
 builder.Services.AddDbContext<DiscoverYourselfDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Configure culture settings
+var defaultCulture = new CultureInfo("en-US");
+CultureInfo.DefaultThreadCurrentCulture = defaultCulture;
+CultureInfo.DefaultThreadCurrentUICulture = defaultCulture;
 
 var app = builder.Build();
 

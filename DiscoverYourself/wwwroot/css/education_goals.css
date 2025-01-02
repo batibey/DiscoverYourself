@@ -1,0 +1,135 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+
+.form-check-label {
+    margin-left: 5px;
+}
+
+/* Fütürist Stil Dokunuşları */
+input, textarea, select {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+form::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    pointer-events: none;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+}
+
+select.form-control {
+    appearance: auto; /* Varsayılan tarayıcı görünümünü etkinleştirir */
+    display: block; /* Varsayılan blok görüntüleme */
+    width: 100%; /* Tam genişlik sağlamak için */
+    height: auto; /* İçeriğe göre yüksekliği ayarlar */
+    padding: 10px; /* İçerik boşlukları */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Kenar çizgisi */
+    border-radius: 5px; /* Köşe yuvarlama */
+    background: rgba(255, 255, 255, 0.2); /* Arka plan şeffaflığı */
+    color: #ffffff; /* Yazı rengi */
+    outline: none; /* Çerçeve efektini kaldırır */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Hafif parlama */
+}

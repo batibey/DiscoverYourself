@@ -42,12 +42,13 @@ public class EducationGoalsController : Controller
             TargetAudience = model.TargetAudience,
             Milestones = model.Milestones,
             SuccessCriteria = model.SuccessCriteria,
-            IsCompleted = model.IsCompleted
+            IsCompleted = model.IsCompleted,
+            UserId = userId
         };
+
         _context.EducationGoals.Add(educationGoals);
         _context.SaveChanges();
 
         return RedirectToAction("Index", new { id = userId });
     }
-
 }
