@@ -4,27 +4,34 @@ body {
     color: #ffffff;
     margin: 0;
     padding: 0;
+    height: 100%; /* Bu satırla yüksekliği artırıyoruz */
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* Formu yukarıya yerleştiriyoruz */
+    padding-top: 40px; /* Sayfanın üst kısmına boşluk ekliyoruz */
 }
 
-h2 {
+h1 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 20px;
     color: #e0e0e0;
 }
 
-form {
+.container {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px; /* Formun genişliğini arttırdık */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    padding-bottom: 40px; /* Alt kısımda boşluk ekliyoruz */
+}
+
+form {
+    width: 100%;
 }
 
 label {
@@ -38,8 +45,8 @@ input[type="date"],
 textarea,
 select {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 15px; /* Paddingi arttırdık */
+    margin-bottom: 20px; /* Daha fazla boşluk ekledik */
     border: none;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.2);
@@ -57,12 +64,12 @@ textarea {
 
 button {
     width: 100%;
-    padding: 10px;
+    padding: 15px; /* Buton paddingi arttırdık */
     background: linear-gradient(90deg, #ff8a00, #e52e71);
     border: none;
     border-radius: 5px;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
@@ -76,7 +83,7 @@ button:active {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Form elemanları arasındaki boşluğu arttırdık */
 }
 
 .form-check {
@@ -125,7 +132,7 @@ select.form-control {
     display: block; /* Varsayılan blok görüntüleme */
     width: 100%; /* Tam genişlik sağlamak için */
     height: auto; /* İçeriğe göre yüksekliği ayarlar */
-    padding: 10px; /* İçerik boşlukları */
+    padding: 15px; /* İçerik boşlukları */
     border: 1px solid rgba(255, 255, 255, 0.2); /* Kenar çizgisi */
     border-radius: 5px; /* Köşe yuvarlama */
     background: rgba(255, 255, 255, 0.2); /* Arka plan şeffaflığı */

@@ -19,6 +19,7 @@
     <form action="/EducationGoals/Save" method="post">
         @Html.AntiForgeryToken()
         <input type="hidden" id="userId" name="UserId" value="@userId">
+
         <div>
             <label for="Title">Title</label>
             <input type="text" class="form-control" id="Title" name="Title" required/>
@@ -38,6 +39,7 @@
             <label for="EndDate">End Date</label>
             <input type="date" class="form-control" id="EndDate" name="EndDate" required/>
         </div>
+
         <div>
             <label>Topics</label>
             <select asp-for="Topics">
@@ -47,6 +49,7 @@
                 }
             </select>
         </div>
+
         <div>
             <label>Difficulty</label>
             <select asp-for="Difficulty">
@@ -71,16 +74,17 @@
             <label for="SuccessCriteria">Success Criteria</label>
             <textarea class="form-control" id="SuccessCriteria" name="SuccessCriteria" rows="3" required></textarea>
         </div>
+
         <div>
-            <input type="hidden" name="IsCompleted" id="IsCompletedHidden" value="false" />
+            <label class="form-check-label" for="IsCompletedCheckbox">Is Complete</label>
+            <input type="hidden" name="IsCompleted" id="IsCompletedHidden" value="false"/>
             <input type="checkbox"
                    class="form-check-input"
                    id="IsCompletedCheckbox"
                    value="true"
-                   @(Model?.IsCompleted == true ? "checked" : "") />
-            <label class="form-check-label" for="IsCompletedCheckbox">Is Complete</label>
-        </div>
+                   @(Model?.IsCompleted == true ? "checked" : "")/>
 
+        </div>
         <button type="submit" class="btn btn-primary mt-3">Save</button>
     </form>
 
