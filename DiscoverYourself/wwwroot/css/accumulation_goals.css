@@ -1,62 +1,141 @@
+/* Genel Ayarlar */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
+    font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
-}
-
-h1 {
-    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input {
+    max-width: 1000px;
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 40px;
 }
 
-.chart-container {
-    margin-top: 30px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+/* Başlıklar */
+h1 {
     text-align: center;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #0056b3;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
 }
 
 .section-title {
-    margin-top: 20px;
-    font-weight: bold;
     font-size: 18px;
-    color: #555;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Form */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Grupları */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+/* Girdi Alanları */
+input[type="number"],
+input[type="date"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    font-size: 14px;
+}
+
+/* Girdi Alanı Focus */
+input:focus,
+select:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+/* Butonlar */
+button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Chart Container */
+.chart-container {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 400px;
+}
+
+/* Yükseklik ve Layout */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    height: auto; /* Sayfa içeriği genişledikçe container büyüsün */
+    max-height: 100%; /* Ekranı aşmasın */
+}
+
+form {
+    margin-bottom: 50px;
+}
+
+/* Mobil uyumlu tasarım */
+@media (max-width: 768px) {
+    body {
+        align-items: center;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .chart-container {
+        height: 250px; /* Mobilde daha küçük chart */
+    }
 }
