@@ -15,26 +15,26 @@
 <body>
 <div class="container">
     <h1>Business Goals</h1>
-    
+
     <form action="/BusinessGoals/Save" method="post">
         @Html.AntiForgeryToken()
         <input type="hidden" id="userId" name="UserId" value="@userId">
 
         <div>
-            <label>Start Date</label>
-            <input asp-for="StartDate" type="date" />
+            <label for="StartDate">Start Date</label>
+            <input asp-for="StartDate" type="date" required/>
         </div>
         <div>
-            <label>End Date</label>
-            <input asp-for="EndDate" type="date" />
+            <label for="EndDate">End Date</label>
+            <input asp-for="EndDate" type="date" required/>
         </div>
         <div>
-            <label>Tasks Completed</label>
-            <input asp-for="TasksCompleted" type="number" min="0"/>
+            <label for="TasksCompleted">Tasks Completed</label>
+            <input asp-for="TasksCompleted" type="number" min="0" required/>
         </div>
         <div>
-            <label>Task Type</label>
-            <select asp-for="TaskType">
+            <label for="TaskType">Task Type</label>
+            <select asp-for="TaskType" required>
                 @foreach (var taskType in Enum.GetValues(typeof(enmTaskTypes)))
                 {
                     <option value="@taskType">@taskType</option>
@@ -42,19 +42,19 @@
             </select>
         </div>
         <div>
-            <label>Daily Work Hours</label>
-            <input asp-for="DailyWorkHours" type="number" step="0.5" min="0" />
+            <label for="DailyWorkHours">Daily Work Hours</label>
+            <input asp-for="DailyWorkHours" type="number" step="0.5" min="0" required />
         </div>
         <div>
-            <label>Daily Self-Development Hours</label>
-            <input asp-for="DailySelfDevelopmentHours" type="number" step="0.5" min="0" />
+            <label for="DailySelfDevelopmentHours">Daily Self-Development Hours</label>
+            <input asp-for="DailySelfDevelopmentHours" type="number" step="0.5" min="0" required />
         </div>
         <div>
-            <label>Additional Info</label>
-            <textarea asp-for="AdditionalInfo"></textarea>
+            <label for="AdditionalInfo">Additional Info</label>
+            <textarea asp-for="AdditionalInfo" required></textarea>
         </div>
-        
-        <button type="submit" class="btn btn-primary mt-3">Save</button>
+
+        <button type="submit">Save</button>
     </form>
 </div>
 </body>
