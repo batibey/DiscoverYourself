@@ -44,5 +44,11 @@ namespace DiscoverYourself.Resources.Views.Home {
                 resourceCulture = value;
             }
         }
+        
+        internal static string WelcomeMsg {
+            get {
+                return ResourceManager.GetString("WelcomeMsg", resourceCulture);
+            }
+        }
     }
 }

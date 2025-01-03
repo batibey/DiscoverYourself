@@ -2,11 +2,14 @@ using System.Globalization;
 using DiscoverYourself.Data;
 using Microsoft.EntityFrameworkCore;
 using DiscoverYourself.Managers;
+using Microsoft.AspNetCore.Localization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddViewLocalization() // Add view localization support
+    .AddDataAnnotationsLocalization(); // Enable localization for validation messages
 
 // Configure session
 builder.Services.AddSession(options =>
@@ -20,10 +23,22 @@ builder.Services.AddSession(options =>
 builder.Services.AddDbContext<DiscoverYourselfDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Configure localization
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+
 // Configure culture settings
-var defaultCulture = new CultureInfo("en-US");
-CultureInfo.DefaultThreadCurrentCulture = defaultCulture;
-CultureInfo.DefaultThreadCurrentUICulture = defaultCulture;
+var supportedCultures = new[] { new CultureInfo("tr"), new CultureInfo("en") };
+var defaultCulture = new CultureInfo("tr"); // Set default culture to Turkish
+
+var localizationOptions = new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture(defaultCulture),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+};
+
+// Add QueryStringRequestCultureProvider for culture switching
+localizationOptions.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
 
 var app = builder.Build();
 
@@ -43,6 +58,7 @@ app.UseStaticFiles(); // Serve static files
 app.UseRouting();
 
 app.UseSession(); // Enable session middleware
+app.UseRequestLocalization(localizationOptions); // Enable localization middleware
 app.UseAuthorization();
 
 app.MapControllerRoute(

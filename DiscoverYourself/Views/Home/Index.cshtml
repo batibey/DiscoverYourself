@@ -1,4 +1,6 @@
 ﻿@model DiscoverYourself.Models.Entities.User
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
 
 @{
     ViewData["Title"] = "Home Page";
@@ -14,7 +16,7 @@
 </head>
 <div class="text-center">
     <div class="header">
-        <h1 class="display-4">Welcome to @userName</h1>
+        <h1 class="display-4">@localizer["WelcomeMsg"] @userName</h1>
         <p>Discover yourself by setting your goals and share them with the world !</p>
         <div class="user-profile">
             <img src="https://i.hizliresim.com/bgtjosy.jpeg" alt="User Profile" class="profile-pic">
