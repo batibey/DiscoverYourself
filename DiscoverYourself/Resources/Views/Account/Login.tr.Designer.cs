@@ -50,5 +50,29 @@ namespace DiscoverYourself.Resources.Views.Account {
                 return ResourceManager.GetString("WelcomeMsg", resourceCulture);
             }
         }
+        
+        internal static string LoginMsg {
+            get {
+                return ResourceManager.GetString("LoginMsg", resourceCulture);
+            }
+        }
+        
+        internal static string RegisterMsg {
+            get {
+                return ResourceManager.GetString("RegisterMsg", resourceCulture);
+            }
+        }
+        
+        internal static string EmailMsg {
+            get {
+                return ResourceManager.GetString("EmailMsg", resourceCulture);
+            }
+        }
+        
+        internal static string PasswordMsg {
+            get {
+                return ResourceManager.GetString("PasswordMsg", resourceCulture);
+            }
+        }
     }
 }

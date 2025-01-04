@@ -1,4 +1,6 @@
 ﻿@model dynamic
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
 @{
     Layout = null;
 }
@@ -13,14 +15,14 @@
 </head>
 <body>
 <div class="login-container">
-    <h1>Login</h1>
+    <h1>@localizer["LoginMsg"]</h1>
     <form asp-action="Login" method="post">
-        <input type="email" name="email" placeholder="Email" class="neon-input" required />
-        <input type="password" name="password" placeholder="Password" class="neon-input" required />
-        <button type="submit" class="neon-button">Login</button>
+        <input type="email" name="email" placeholder="@localizer["EmailMsg"]" class="neon-input" required />
+        <input type="password" name="password" placeholder="@localizer["PasswordMsg"]" class="neon-input" required />
+        <button type="submit" class="neon-button">@localizer["LoginMsg"]</button>
     </form>
     <div class="register-link">
-        <a href="@Url.Action("Register", "Account")" class="btn btn-info">Register here</a>
+        <a href="@Url.Action("Register", "Account")" class="btn btn-info">@localizer["RegisterMsg"]</a>
     </div>
 </div>
 </body>

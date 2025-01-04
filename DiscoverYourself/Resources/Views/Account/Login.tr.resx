@@ -21,4 +21,16 @@
     <data name="WelcomeMsg" xml:space="preserve">
         <value>Hoşgeldiniz</value>
     </data>
+    <data name="LoginMsg" xml:space="preserve">
+        <value>Giriş</value>
+    </data>
+    <data name="RegisterMsg" xml:space="preserve">
+        <value>Kayıt Ol</value>
+    </data>
+    <data name="EmailMsg" xml:space="preserve">
+        <value>E-Posta</value>
+    </data>
+    <data name="PasswordMsg" xml:space="preserve">
+        <value>Şifre</value>
+    </data>
 </root>
