@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Localization;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews()
-    .AddViewLocalization() 
-    .AddDataAnnotationsLocalization(); 
+    .AddViewLocalization()
+    .AddDataAnnotationsLocalization();
 
 // Configure session
 builder.Services.AddSession(options =>
@@ -31,11 +31,12 @@ var localizationOptions = new RequestLocalizationOptions
 {
     DefaultRequestCulture = new RequestCulture(defaultCulture),
     SupportedCultures = supportedCultures,
-    SupportedUICultures = supportedCultures,
-    RequestCultureProviders = new List<IRequestCultureProvider>() // Force default culture
+    SupportedUICultures = supportedCultures
 };
 
+// Add CookieRequestCultureProvider to store selected culture
 localizationOptions.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
+localizationOptions.RequestCultureProviders.Insert(1, new CookieRequestCultureProvider()); // Add Cookie support
 
 var app = builder.Build();
 
@@ -46,7 +47,7 @@ app.MigrateDatabase<DiscoverYourselfDbContext>();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    app.UseHsts(); 
+    app.UseHsts();
 }
 
 app.UseHttpsRedirection();

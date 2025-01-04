@@ -1,5 +1,7 @@
 ﻿@model dynamic
+@using System.Globalization
 @using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @inject IViewLocalizer localizer
 @{
     Layout = null;
@@ -10,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>@localizer["LoginMsg"]</title>
     <link rel="stylesheet" href="~/css/login.css" asp-append-version="true">
 </head>
 <body>
@@ -21,8 +23,20 @@
         <input type="password" name="password" placeholder="@localizer["PasswordMsg"]" class="neon-input" required />
         <button type="submit" class="neon-button">@localizer["LoginMsg"]</button>
     </form>
-    <div class="register-link">
-        <a href="@Url.Action("Register", "Account")" class="btn btn-info">@localizer["RegisterMsg"]</a>
+    <div class="register-language-container">
+        <div class="register-link">
+            <a href="@Url.Action("Register", "Account")" class="btn custom-btn">@localizer["RegisterMsg"]</a>
+        </div>
+        <div class="language-selector">
+            <a href="@Url.Action("SetCulture", "Culture", new { culture = "en", returnUrl = ViewContext.HttpContext.Request.Path })"
+               class="btn custom-btn @(CultureInfo.CurrentUICulture.Name == "en" ? "active" : "")">
+                English
+            </a>
+            <a href="@Url.Action("SetCulture", "Culture", new { culture = "tr", returnUrl = ViewContext.HttpContext.Request.Path })"
+               class="btn custom-btn @(CultureInfo.CurrentUICulture.Name == "tr" ? "active" : "")">
+                Türkçe
+            </a>
+        </div>
     </div>
 </div>
 </body>

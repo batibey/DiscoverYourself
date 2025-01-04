@@ -4,30 +4,30 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #001f3f; 
+    background-color: #001f3f;
     font-family: 'Arial', sans-serif;
     color: white;
 }
 
 .login-container {
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     width: 100%;
-    max-width: 400px; 
-    margin: auto; 
+    max-width: 400px;
+    margin: auto;
 }
 
 .neon-input,
 .neon-button {
     display: block;
-    width: calc(100% - 20px); 
-    max-width: 360px; 
-    height: 45px; 
+    width: calc(100% - 20px);
+    max-width: 360px;
+    height: 45px;
     padding: 10px;
-    margin: 10px auto; 
+    margin: 10px auto;
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -45,7 +45,7 @@ body {
 }
 
 .neon-button {
-    background-color: lightskyblue; 
+    background-color: lightskyblue;
     border: none;
     font-size: 1rem;
     font-weight: bold;
@@ -56,6 +56,71 @@ body {
 }
 
 .neon-button:hover {
-    background-color: #00d4ff; 
+    background-color: #00d4ff;
     box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+}
+
+.register-language-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px; /* Spacing between buttons */
+}
+
+.register-language-container a {
+    text-decoration: none;
+}
+
+.language-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between language buttons */
+    flex-wrap: wrap; /* Ensure buttons wrap on small screens */
+}
+
+.language-selector .language-btn {
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    margin: 0 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #6c757d;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.language-selector .language-btn:hover {
+    color: #ffffff;
+    background-color: #495057;
+    border-color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.language-selector .language-btn.active {
+    background-color: #007bff;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 15px #007bff, 0 0 20px #007bff;
+}
+
+.register-link .custom-btn {
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #17a2b8;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+.register-link .custom-btn:hover {
+    background-color: #138496;
+    color: #ffffff;
+    box-shadow: 0 0 10px #17a2b8, 0 0 20px #17a2b8;
 }
