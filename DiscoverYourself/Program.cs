@@ -28,13 +28,14 @@ builder.Services.AddLocalization(options => options.ResourcesPath = "Resources")
 
 // Configure culture settings
 var supportedCultures = new[] { new CultureInfo("tr"), new CultureInfo("en") };
-var defaultCulture = new CultureInfo("tr"); // Set default culture to Turkish
+var defaultCulture = new CultureInfo("en"); // Set default culture to English
 
 var localizationOptions = new RequestLocalizationOptions
 {
     DefaultRequestCulture = new RequestCulture(defaultCulture),
     SupportedCultures = supportedCultures,
-    SupportedUICultures = supportedCultures
+    SupportedUICultures = supportedCultures,
+    RequestCultureProviders = new List<IRequestCultureProvider>() // Force default culture
 };
 
 // Add QueryStringRequestCultureProvider for culture switching
