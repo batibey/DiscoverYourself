@@ -7,14 +7,14 @@ public class EducationGoalRequestModel
 {
     [Required]
     public int UserId { get; set; }
-    public string Title { get; set; } // Hedefin başlığı
-    public string Description { get; set; } // Hedefin açıklaması
-    public DateTime StartDate { get; set; } // Başlangıç tarihi
-    public DateTime EndDate { get; set; } // Bitiş tarihi
-    public enmTopics Topics { get; set; } // Eğitimde işlenecek konular
-    public enmDifficultyLevel Difficulty { get; set; } // Zorluk seviyesi
-    public string TargetAudience { get; set; } // Hedeflenen kitle
-    public string Milestones { get; set; } // Ara adımlar
-    public string SuccessCriteria { get; set; } // Başarı ölçütü
-    public bool IsCompleted { get; set; } // Tamamlandı mı ?
+    public string Title { get; set; } 
+    public string Description { get; set; } 
+    public DateTime StartDate { get; set; }
+    public DateTime EndDate { get; set; } 
+    public enmTopics Topics { get; set; } 
+    public enmDifficultyLevel Difficulty { get; set; }
+    public string TargetAudience { get; set; } 
+    public string Milestones { get; set; } 
+    public string SuccessCriteria { get; set; } 
+    public bool IsCompleted { get; set; } 
 }

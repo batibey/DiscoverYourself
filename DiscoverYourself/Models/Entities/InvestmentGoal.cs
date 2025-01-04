@@ -9,31 +9,30 @@ public class InvestmentGoal
     public int Id { get; set; }
 
     [Required]
-    public DateTime Date { get; set; } // Kullanıcının hedeflerini belirttiği tarih
+    public DateTime Date { get; set; } 
 
     [Required]
-    public decimal TargetCurrency { get; set; } // Hedef döviz yatırımı
+    public decimal TargetCurrency { get; set; } 
 
     [Required]
-    public decimal ActualCurrency { get; set; } // Gerçekleşen döviz yatırımı
+    public decimal ActualCurrency { get; set; } 
 
     [Required]
-    public decimal TargetGold { get; set; } // Hedef altın yatırımı
+    public decimal TargetGold { get; set; } 
 
     [Required]
-    public decimal ActualGold { get; set; } // Gerçekleşen altın yatırımı
+    public decimal ActualGold { get; set; } 
 
     [Required]
-    public decimal TargetSilver { get; set; } // Hedef gümüş yatırımı
+    public decimal TargetSilver { get; set; } 
 
     [Required]
-    public decimal ActualSilver { get; set; } // Gerçekleşen gümüş yatırımı
+    public decimal ActualSilver { get; set; }
 
     // Foreign key
     [Required]
     public int UserId { get; set; }
-
-    // Navigation property
+    
     [ForeignKey("UserId")]
     public User User { get; set; } = null!;
 }

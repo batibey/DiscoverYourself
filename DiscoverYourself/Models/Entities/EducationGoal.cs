@@ -8,16 +8,16 @@ public class EducationGoal
 {
     [Key]
     public int Id { get; set; }
-    public string Title { get; set; } // Hedefin başlığı
-    public string Description { get; set; } // Hedefin açıklaması
-    public DateTime StartDate { get; set; } // Hedefin başlangıç tarihi
-    public DateTime EndDate { get; set; } // Hedefin bitiş tarihi
-    public enmTopics Topics { get; set; } // Hedefte ele alınacak konular (Örn: Liderlik, İletişim)
-    public enmDifficultyLevel Difficulty { get; set; } // Hedefin zorluk seviyesi (Enum olarak tanımlanabilir)
-    public string TargetAudience { get; set; } // Hedeflenen kitle (Örn: Yeni mezunlar, yöneticiler)
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public DateTime StartDate { get; set; } 
+    public DateTime EndDate { get; set; } 
+    public enmTopics Topics { get; set; } // Hedefte ele alınacak konular
+    public enmDifficultyLevel Difficulty { get; set; } // Hedefin zorluk seviyesi
+    public string TargetAudience { get; set; } // Hedeflenen kitle
     public string Milestones { get; set; } // Hedefe ulaşmak için belirlenen ara adımlar
     public string SuccessCriteria { get; set; } // Hedefin başarı ölçütü (Örn: Bir sertifika almak)
-    public bool IsCompleted { get; set; } // Hedef tamamlandı mı?
+    public bool IsCompleted { get; set; } 
     
     // Foreign key
     [Required]

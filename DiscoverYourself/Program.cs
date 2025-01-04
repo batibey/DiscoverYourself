@@ -6,10 +6,9 @@ using Microsoft.AspNetCore.Localization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews()
-    .AddViewLocalization() // Add view localization support
-    .AddDataAnnotationsLocalization(); // Enable localization for validation messages
+    .AddViewLocalization() 
+    .AddDataAnnotationsLocalization(); 
 
 // Configure session
 builder.Services.AddSession(options =>
@@ -19,16 +18,14 @@ builder.Services.AddSession(options =>
     options.IdleTimeout = TimeSpan.FromMinutes(30); // Session timeout
 });
 
-// Configure Entity Framework and database
 builder.Services.AddDbContext<DiscoverYourselfDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configure localization
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
 // Configure culture settings
 var supportedCultures = new[] { new CultureInfo("tr"), new CultureInfo("en") };
-var defaultCulture = new CultureInfo("en"); // Set default culture to English
+var defaultCulture = new CultureInfo("en");
 
 var localizationOptions = new RequestLocalizationOptions
 {
@@ -38,7 +35,6 @@ var localizationOptions = new RequestLocalizationOptions
     RequestCultureProviders = new List<IRequestCultureProvider>() // Force default culture
 };
 
-// Add QueryStringRequestCultureProvider for culture switching
 localizationOptions.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
 
 var app = builder.Build();
@@ -50,11 +46,11 @@ app.MigrateDatabase<DiscoverYourselfDbContext>();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    app.UseHsts(); // Enable HSTS for production
+    app.UseHsts(); 
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles(); // Serve static files
+app.UseStaticFiles();
 
 app.UseRouting();
 
