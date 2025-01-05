@@ -4,6 +4,7 @@ using System.Text;
 using DiscoverYourself.Data;
 using DiscoverYourself.Models.Entities;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 public class AccountController : Controller
 {
@@ -29,6 +30,7 @@ public class AccountController : Controller
 
         // Set session or token
         HttpContext.Session.SetString("UserId", user.Id.ToString());
+        Log.Information($"{user.Email} logged in.");
         return RedirectToAction("Index", "Home", user);
     }
 
@@ -52,6 +54,7 @@ public class AccountController : Controller
 
         _context.Users.Add(user);
         await _context.SaveChangesAsync();
+        Log.Information($"{user.Email} registered.");
         return RedirectToAction("Login");
     }
 
