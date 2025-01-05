@@ -3,8 +3,21 @@ using DiscoverYourself.Data;
 using Microsoft.EntityFrameworkCore;
 using DiscoverYourself.Managers;
 using Microsoft.AspNetCore.Localization;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure Serilog
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File(
+        path: "Logs/log-.txt",
+        rollingInterval: RollingInterval.Day, 
+        retainedFileCountLimit: 7, // max 7 day
+        outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
+    .CreateLogger();
+
+// Add Serilog to the builder
+builder.Host.UseSerilog();
 
 builder.Services.AddControllersWithViews()
     .AddViewLocalization()
@@ -59,8 +72,22 @@ app.UseSession(); // Enable session middleware
 app.UseRequestLocalization(localizationOptions); // Enable localization middleware
 app.UseAuthorization();
 
+// Log application start
+Log.Information("Application started.");
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.Run();
+try
+{
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application failed to start.");
+}
+finally
+{
+    Log.CloseAndFlush(); // Ensure all logs are written before application exits
+}
