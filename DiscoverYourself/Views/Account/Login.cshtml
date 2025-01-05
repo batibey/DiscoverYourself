@@ -30,11 +30,11 @@
         <div class="language-selector">
             <a href="@Url.Action("SetCulture", "Culture", new { culture = "en", returnUrl = ViewContext.HttpContext.Request.Path })"
                class="btn custom-btn @(CultureInfo.CurrentUICulture.Name == "en" ? "active" : "")">
-                English
+                <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-icon" />
             </a>
             <a href="@Url.Action("SetCulture", "Culture", new { culture = "tr", returnUrl = ViewContext.HttpContext.Request.Path })"
                class="btn custom-btn @(CultureInfo.CurrentUICulture.Name == "tr" ? "active" : "")">
-                Türkçe
+                <img src="https://flagcdn.com/w40/tr.png" alt="Türkçe" class="flag-icon" />
             </a>
         </div>
     </div>
