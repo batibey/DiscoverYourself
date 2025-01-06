@@ -1,8 +1,9 @@
 using System.Globalization;
 using DiscoverYourself.Data;
-using Microsoft.EntityFrameworkCore;
 using DiscoverYourself.Managers;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,14 +12,15 @@ var builder = WebApplication.CreateBuilder(args);
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File(
         path: "Logs/log-.txt",
-        rollingInterval: RollingInterval.Day, 
-        retainedFileCountLimit: 7, // max 7 day
+        rollingInterval: RollingInterval.Day,
+        retainedFileCountLimit: 7, // Max 7 days
         outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
     .CreateLogger();
 
 // Add Serilog to the builder
 builder.Host.UseSerilog();
 
+// Add services to the container
 builder.Services.AddControllersWithViews()
     .AddViewLocalization()
     .AddDataAnnotationsLocalization();
@@ -31,9 +33,11 @@ builder.Services.AddSession(options =>
     options.IdleTimeout = TimeSpan.FromMinutes(30); // Session timeout
 });
 
+// Add DbContext
 builder.Services.AddDbContext<DiscoverYourselfDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Add localization
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
 // Configure culture settings
@@ -49,14 +53,27 @@ var localizationOptions = new RequestLocalizationOptions
 
 // Add CookieRequestCultureProvider to store selected culture
 localizationOptions.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
-localizationOptions.RequestCultureProviders.Insert(1, new CookieRequestCultureProvider()); // Add Cookie support
+localizationOptions.RequestCultureProviders.Insert(1, new CookieRequestCultureProvider());
+
+// Add authentication
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Account/Login";
+        options.LogoutPath = "/Account/Logout";
+        options.AccessDeniedPath = "/Account/AccessDenied";
+        options.Cookie.HttpOnly = true;
+        options.Cookie.IsEssential = true; // Ensure compatibility with GDPR compliance
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Set cookie expiration
+        options.SlidingExpiration = true; // Enable sliding expiration
+    });
 
 var app = builder.Build();
 
 // Auto migrate
 app.MigrateDatabase<DiscoverYourselfDbContext>();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -70,11 +87,22 @@ app.UseRouting();
 
 app.UseSession(); // Enable session middleware
 app.UseRequestLocalization(localizationOptions); // Enable localization middleware
-app.UseAuthorization();
+app.UseAuthentication(); // Add authentication middleware
+app.UseAuthorization(); // Add authorization middleware
+
+// Ensure no-cache headers for sensitive pages
+app.Use(async (context, next) =>
+{
+    context.Response.Headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0";
+    context.Response.Headers["Pragma"] = "no-cache";
+    context.Response.Headers["Expires"] = "-1";
+    await next();
+});
 
 // Log application start
 Log.Information("Application started.");
 
+// Configure default route
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

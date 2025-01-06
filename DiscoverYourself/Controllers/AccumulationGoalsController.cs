@@ -4,7 +4,7 @@ using DiscoverYourself.Models.Entities;
 using DiscoverYourself.Models.RequestModels;
 
 namespace DiscoverYourself.Controllers;
-
+[Authorize]
 public class AccumulationGoalsController : Controller
 {
     private readonly ILogger<AccumulationGoalsController> _logger;
@@ -15,7 +15,6 @@ public class AccumulationGoalsController : Controller
         _logger = logger;
         _context = context;
     }
-    [Authorize]
     public IActionResult Index(int id)
     {
         ViewBag.UserId = id;
@@ -46,7 +45,6 @@ public class AccumulationGoalsController : Controller
                 UserId = userId
             };
             
-            // Veritabanına kaydet
             _context.InvestmentGoals.Add(investmentGoal);
             _context.SaveChanges();
 

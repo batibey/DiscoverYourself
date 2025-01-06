@@ -4,7 +4,7 @@ using DiscoverYourself.Models.Entities;
 using DiscoverYourself.Models.RequestModels;
 
 namespace DiscoverYourself.Controllers;
-
+[Authorize]
 public class BusinessGoalsController : Controller
 {
     private readonly ILogger<BusinessGoalsController> _logger;
@@ -15,7 +15,6 @@ public class BusinessGoalsController : Controller
         _logger = logger;
         _context = context;
     }
-    [Authorize]
     public IActionResult Index(int id)
     {
         ViewBag.UserId = id;

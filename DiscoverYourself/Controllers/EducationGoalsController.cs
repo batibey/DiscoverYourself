@@ -4,7 +4,7 @@ using DiscoverYourself.Models.Entities;
 using DiscoverYourself.Models.RequestModels;
 
 namespace DiscoverYourself.Controllers;
-
+[Authorize]
 public class EducationGoalsController : Controller
 {
     private readonly ILogger<EducationGoalsController> _logger;

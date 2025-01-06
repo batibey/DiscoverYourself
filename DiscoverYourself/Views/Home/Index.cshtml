@@ -17,10 +17,13 @@
 <div class="text-center">
     <div class="header">
         <h1 class="display-4">@localizer["WelcomeMsg"] @userName</h1>
-        <p>Discover yourself by setting your goals and share them with the world !</p>
+        <p>Discover yourself by setting your goals and share them with the world!</p>
         <div class="user-profile">
             <img src="https://i.hizliresim.com/bgtjosy.jpeg" alt="User Profile" class="profile-pic">
         </div>
+        <form asp-controller="Account" asp-action="Logout" method="post" class="logout-form">
+            <button type="submit" class="btn btn-danger">Logout</button>
+        </form>
     </div>
     <div class="blog-section">
         <a href="/AccumulationGoals/Index/@userId" class="target-btn">Accumulation Goals</a>
@@ -29,5 +32,3 @@
         <a href="" class="target-btn">Development Goals</a>
     </div>
 </div>
-
-

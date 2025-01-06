@@ -4,7 +4,7 @@ using DiscoverYourself.Models;
 using DiscoverYourself.Models.Entities;
 
 namespace DiscoverYourself.Controllers;
-
+[Authorize]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -13,12 +13,10 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-    [Authorize]
     public IActionResult Index(User user)
     {
         return View(user);
     }
-    [Authorize]
     public IActionResult Privacy()
     {
         return View();

@@ -5,6 +5,8 @@ using DiscoverYourself.Data;
 using DiscoverYourself.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 public class AccountController : Controller
 {
@@ -69,4 +71,20 @@ public class AccountController : Controller
         var hash = CreatePasswordHash(password);
         return hash == storedHash;
     }
+    
+    public async Task<IActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        
+        if (HttpContext.Request.Cookies != null)
+        {
+            foreach (var cookie in HttpContext.Request.Cookies.Keys)
+            {
+                Response.Cookies.Delete(cookie);
+            }
+        }
+        
+        return RedirectToAction("Login", "Account");
+    }
+
 }
