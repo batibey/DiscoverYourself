@@ -1,5 +1,15 @@
+# Build artifacts
 bin/
 obj/
+
+# NuGet packages
 /packages/
+
+# Rider and Resharper
 riderModule.iml
 /_ReSharper.Caches/
+
+# Local configuration
+appsettings.Local.json
+appsettings.*.json
+secrets.json
