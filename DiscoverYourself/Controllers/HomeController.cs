@@ -2,19 +2,23 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using DiscoverYourself.Models;
 using DiscoverYourself.Models.Entities;
+using DiscoverYourself.Services;
 
 namespace DiscoverYourself.Controllers;
 [Authorize]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IMailService _mailService;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, IMailService mailService)
     {
+        _mailService = mailService;
         _logger = logger;
     }
-    public IActionResult Index(User user)
+    public async Task<IActionResult> Index(User user)
     {
+        await _mailService.SendEmailAsync("mustafa.bati9@gmail.com", "Test Subject", "This is a test email.");
         return View(user);
     }
     public IActionResult Privacy()

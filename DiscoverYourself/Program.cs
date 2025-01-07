@@ -1,6 +1,8 @@
 using System.Globalization;
 using DiscoverYourself.Data;
 using DiscoverYourself.Managers;
+using DiscoverYourself.Models.MailModels;
+using DiscoverYourself.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -67,6 +69,10 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Set cookie expiration
         options.SlidingExpiration = true; // Enable sliding expiration
     });
+
+// Add mail service
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+builder.Services.AddTransient<IMailService, MailService>();
 
 var app = builder.Build();
 
