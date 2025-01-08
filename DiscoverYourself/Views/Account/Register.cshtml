@@ -1,4 +1,9 @@
-﻿@model dynamic
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model dynamic
+@inject IViewLocalizer localizer
+
+
 @{
     Layout = null;
 }
@@ -12,12 +17,12 @@
 </head>
 <body>
 <div class="register-container">
-    <h1>Register</h1>
+<h1>@localizer["RegisterMsg"]</h1>
     <form asp-action="Register" method="post">
-        <input type="text" name="username" placeholder="Username" class="neon-input" required />
-        <input type="email" name="email" placeholder="Email" class="neon-input" required />
-        <input type="password" name="password" placeholder="Password" class="neon-input" required />
-        <button type="submit" class="neon-button">Register</button>
+        <input type="text" name="username" placeholder="@localizer["UsernameMsg"]" class="neon-input" required />
+        <input type="email" name="email" placeholder="@localizer["EmailMsg"]" class="neon-input" required />
+        <input type="password" name="password" placeholder="@localizer["PasswordMsg"]" class="neon-input" required />
+        <button type="submit" class="neon-button">@localizer["RegisterMsg"]</button>
     </form>
 </div>
 </body>
