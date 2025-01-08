@@ -18,4 +18,49 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="AccumulationGoalsMsg" xml:space="preserve">
+        <value>Birikim Hedefleri</value>
+    </data>
+    <data name="DateMsg" xml:space="preserve">
+        <value>Tarih</value>
+    </data>
+    <data name="GoalsMsg" xml:space="preserve">
+        <value>Hedef</value>
+    </data>
+    <data name="TargetCurrencyMsg" xml:space="preserve">
+        <value>Hedef Döviz Yatırımı</value>
+    </data>
+    <data name="TargetGoldMsg" xml:space="preserve">
+        <value>Hedef Altın Yatırımı</value>
+    </data>
+    <data name="TargetSilverMsg" xml:space="preserve">
+        <value>Hedef Gümüş Yatırımı</value>
+    </data>
+    <data name="RealizedMsg" xml:space="preserve">
+        <value>Gerçekleşen</value>
+    </data>
+    <data name="RealizedCurrencyMsg" xml:space="preserve">
+        <value>Gerçekleşen Döviz Yatırımı</value>
+    </data>
+    <data name="RealizedGoldMsg" xml:space="preserve">
+        <value>Gerçekleşen Altın Yatırımı</value>
+    </data>
+    <data name="RealizedSilverMsg" xml:space="preserve">
+        <value>Gerçekleşen Gümüş Yatırımı</value>
+    </data>
+    <data name="SaveMsg" xml:space="preserve">
+        <value>Kaydet</value>
+    </data>
+    <data name="UpdateChartMsg" xml:space="preserve">
+        <value>Grafiği Güncelle</value>
+    </data>
+    <data name="Currency" xml:space="preserve">
+        <value>Döviz</value>
+    </data>
+    <data name="GoldMsg" xml:space="preserve">
+        <value>Altın</value>
+    </data>
+    <data name="SilverMsg" xml:space="preserve">
+        <value>Gümüş</value>
+    </data>
 </root>

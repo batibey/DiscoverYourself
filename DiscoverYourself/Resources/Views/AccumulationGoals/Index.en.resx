@@ -18,4 +18,49 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="AccumulationGoalsMsg" xml:space="preserve">
+        <value>Accumulation Goals</value>
+    </data>
+    <data name="DateMsg" xml:space="preserve">
+        <value>Date</value>
+    </data>
+    <data name="GoalsMsg" xml:space="preserve">
+        <value>Goals</value>
+    </data>
+    <data name="TargetCurrencyMsg" xml:space="preserve">
+        <value>Target Currency Accumulation</value>
+    </data>
+    <data name="TargetGoldMsg" xml:space="preserve">
+        <value>Target Gold Accumulation</value>
+    </data>
+    <data name="TargetSilverMsg" xml:space="preserve">
+        <value>Target Silver Accumulation</value>
+    </data>
+    <data name="RealizedMsg" xml:space="preserve">
+        <value>Realized</value>
+    </data>
+    <data name="RealizedCurrencyMsg" xml:space="preserve">
+        <value>Realized Currency Accumulation</value>
+    </data>
+    <data name="RealizedGoldMsg" xml:space="preserve">
+        <value>Realized Gold Accumulation</value>
+    </data>
+    <data name="RealizedSilverMsg" xml:space="preserve">
+        <value>Realized Silver Accumulation</value>
+    </data>
+    <data name="SaveMsg" xml:space="preserve">
+        <value>Save</value>
+    </data>
+    <data name="UpdateChartMsg" xml:space="preserve">
+        <value>Update Chart</value>
+    </data>
+    <data name="GoldMsg" xml:space="preserve">
+        <value>Gold</value>
+    </data>
+    <data name="SilverMsg" xml:space="preserve">
+        <value>Silver</value>
+    </data>
+    <data name="Currency" xml:space="preserve">
+        <value>Currency</value>
+    </data>
 </root>

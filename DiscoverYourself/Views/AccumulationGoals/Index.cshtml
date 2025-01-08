@@ -1,3 +1,7 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@inject IViewLocalizer localizer
+
 @{
     Layout = null;
     var userId =  ViewBag.UserId;
@@ -6,56 +10,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Accumulation Goals</title>
+    <title>@localizer["AccumulationGoalsMsg"]</title>
     <script src="~/js/chart.js"></script>
     <link rel="stylesheet" href="~/css/accumulation_goals.css" asp-append-version="true">
 </head>
 <body>
 <div class="container">
-    <h1>Accumulation Goals</h1>
+    <h1>@localizer["AccumulationGoalsMsg"]</h1>
 
     <form action="/AccumulationGoals/Save" method="post">
         @Html.AntiForgeryToken()
         <input type="hidden" id="userId" name="UserId" value="@userId">
         <div class="form-group">
-            <label for="dateInput">Date:</label>
+            <label for="dateInput">@localizer["DateMsg"]:</label>
             <input type="date" id="dateInput" name="Date" required>
         </div>
 
         <div class="section">
-            <div class="section-title">Goals</div><br/><hr/>
+            <div class="section-title">@localizer["GoalsMsg"]</div><br/><hr/>
             <div class="form-group">
-                <label for="targetCurrencyInput">Hedef Döviz Yatırımı (₺):</label>
+                <label for="targetCurrencyInput">@localizer["TargetCurrencyMsg"] (₺):</label>
                 <input type="number" id="targetCurrencyInput" name="TargetCurrency" placeholder="Hedef döviz miktarını giriniz" required>
             </div>
             <div class="form-group">
-                <label for="targetGoldInput">Hedef Altın Yatırımı (₺):</label>
+                <label for="targetGoldInput">@localizer["TargetGoldMsg"] (₺):</label>
                 <input type="number" id="targetGoldInput" name="TargetGold" placeholder="Hedef altın miktarını giriniz" required>
             </div>
             <div class="form-group">
-                <label for="targetSilverInput">Hedef Gümüş Yatırımı (₺):</label>
+                <label for="targetSilverInput">@localizer["TargetSilverMsg"] (₺):</label>
                 <input type="number" id="targetSilverInput" name="TargetSilver" placeholder="Hedef gümüş miktarını giriniz" required>
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">Realized</div><br/><hr/>
+            <div class="section-title">@localizer["RealizedMsg"]</div><br/><hr/>
             <div class="form-group">
-                <label for="actualCurrencyInput">Gerçekleşen Döviz Yatırımı (₺):</label>
+                <label for="actualCurrencyInput">@localizer["RealizedCurrencyMsg"] (₺):</label>
                 <input type="number" id="actualCurrencyInput" name="ActualCurrency" placeholder="Yapılan döviz miktarını giriniz" required>
             </div>
             <div class="form-group">
-                <label for="actualGoldInput">Gerçekleşen Altın Yatırımı (₺):</label>
+                <label for="actualGoldInput">@localizer["RealizedGoldMsg"] (₺):</label>
                 <input type="number" id="actualGoldInput" name="ActualGold" placeholder="Yapılan altın miktarını giriniz" required>
             </div>
             <div class="form-group">
-                <label for="actualSilverInput">Gerçekleşen Gümüş Yatırımı (₺):</label>
+                <label for="actualSilverInput">@localizer["RealizedSilverMsg"] (₺):</label>
                 <input type="number" id="actualSilverInput" name="ActualSilver" placeholder="Yapılan gümüş miktarını giriniz" required>
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary mt-3">Save</button><br/><br/>
-        <button type="button" class="btn btn-secondary mt-3" onclick="updateChart()">Update Chart</button>
+        <button type="submit" class="btn btn-primary mt-3">@localizer["SaveMsg"]</button><br/><br/>
+        <button type="button" class="btn btn-secondary mt-3" onclick="updateChart()">@localizer["UpdateChartMsg"]</button>
     </form>
 
     <div class="chart-container mt-5">
@@ -69,17 +73,17 @@
     const investmentChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Döviz', 'Altın', 'Gümüş'],
+            labels: ['@localizer["CurrencyMsg"]', '@localizer["GoldMsg"]', '@localizer["SilverMsg"]'],
             datasets: [
                 {
-                    label: 'Hedef Yatırım (₺)',
+                    label: '@localizer["GoalsMsg"] (₺)',
                     data: [0, 0, 0],
                     backgroundColor: 'rgba(0, 123, 255, 0.6)',
                     borderColor: 'rgba(0, 123, 255, 1)',
                     borderWidth: 1
                 },
                 {
-                    label: 'Gerçekleşen Yatırım (₺)',
+                    label: '@localizer["RealizedMsg"] (₺)',
                     data: [0, 0, 0],
                     backgroundColor: 'rgba(40, 167, 69, 0.6)',
                     borderColor: 'rgba(40, 167, 69, 1)',
