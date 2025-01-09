@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>@localizer["HomeMsg"]</title>
     <link rel="stylesheet" href="~/css/home_index.css" asp-append-version="true">
 </head>
 <div class="text-center">
@@ -22,13 +22,13 @@
             <img src="https://i.hizliresim.com/bgtjosy.jpeg" alt="User Profile" class="profile-pic">
         </div>
         <form asp-controller="Account" asp-action="Logout" method="post" class="logout-form">
-            <button type="submit" class="btn btn-danger">Logout</button>
+            <button type="submit" class="btn btn-danger">@localizer["LogoutMsg"]</button>
         </form>
     </div>
     <div class="blog-section">
-        <a href="/AccumulationGoals/Index/@userId" class="target-btn">Accumulation Goals</a>
-        <a href="/BusinessGoals/Index/@userId" class="target-btn">Business Goals</a>
-        <a href="/EducationGoals/Index/@userId" class="target-btn">Education Goals</a>
-        <a href="" class="target-btn">Development Goals</a>
+        <a href="/AccumulationGoals/Index/@userId" class="target-btn">@localizer["AccumulationGoalsMsg"]</a>
+        <a href="/BusinessGoals/Index/@userId" class="target-btn">@localizer["BusinessGoalsMsg"]</a>
+        <a href="/EducationGoals/Index/@userId" class="target-btn">@localizer["EducationGoalsMsg"]</a>
+        <a href="/DevelopmentGoals/Index/@userId" class="target-btn">@localizer["DevelopmentGoalsMsg"]</a>
     </div>
 </div>

@@ -50,5 +50,41 @@ namespace DiscoverYourself.Resources.Views.Home {
                 return ResourceManager.GetString("WelcomeMsg", resourceCulture);
             }
         }
+        
+        internal static string AccumulationGoalsMsg {
+            get {
+                return ResourceManager.GetString("AccumulationGoalsMsg", resourceCulture);
+            }
+        }
+        
+        internal static string BusinessGoalsMsg {
+            get {
+                return ResourceManager.GetString("BusinessGoalsMsg", resourceCulture);
+            }
+        }
+        
+        internal static string DevelopmentGoalsMsg {
+            get {
+                return ResourceManager.GetString("DevelopmentGoalsMsg", resourceCulture);
+            }
+        }
+        
+        internal static string EducationGoalsMsg {
+            get {
+                return ResourceManager.GetString("EducationGoalsMsg", resourceCulture);
+            }
+        }
+        
+        internal static string LogoutMsg {
+            get {
+                return ResourceManager.GetString("LogoutMsg", resourceCulture);
+            }
+        }
+        
+        internal static string HomeMsg {
+            get {
+                return ResourceManager.GetString("HomeMsg", resourceCulture);
+            }
+        }
     }
 }

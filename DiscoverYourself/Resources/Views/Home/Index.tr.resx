@@ -21,4 +21,22 @@
     <data name="WelcomeMsg" xml:space="preserve">
         <value>Hoşgeldiniz</value>
     </data>
+    <data name="AccumulationGoalsMsg" xml:space="preserve">
+        <value>Birikim Hedefleri</value>
+    </data>
+    <data name="BusinessGoalsMsg" xml:space="preserve">
+        <value>İş Hedefleri</value>
+    </data>
+    <data name="DevelopmentGoalsMsg" xml:space="preserve">
+        <value>Gelişim Hedefleri</value>
+    </data>
+    <data name="EducationGoalsMsg" xml:space="preserve">
+        <value>Eğitim Hedefleri</value>
+    </data>
+    <data name="LogoutMsg" xml:space="preserve">
+        <value>Çık</value>
+    </data>
+    <data name="HomeMsg" xml:space="preserve">
+        <value>Anasayfa</value>
+    </data>
 </root>

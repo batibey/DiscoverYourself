@@ -21,4 +21,22 @@
     <data name="WelcomeMsg" xml:space="preserve">
         <value>Welcome</value>
     </data>
+    <data name="AccumulationGoalsMsg" xml:space="preserve">
+        <value>Accumulation Goals</value>
+    </data>
+    <data name="BusinessGoalsMsg" xml:space="preserve">
+        <value>Business Goals</value>
+    </data>
+    <data name="EducationGoalsMsg" xml:space="preserve">
+        <value>Education Goals</value>
+    </data>
+    <data name="DevelopmentGoalsMsg" xml:space="preserve">
+        <value>Development Goals</value>
+    </data>
+    <data name="LogoutMsg" xml:space="preserve">
+        <value>Logout</value>
+    </data>
+    <data name="HomeMsg" xml:space="preserve">
+        <value>Home</value>
+    </data>
 </root>
