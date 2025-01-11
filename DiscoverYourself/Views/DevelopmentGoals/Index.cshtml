@@ -1,4 +1,6 @@
-@model DiscoverYourself.Models.Entities.DevelopmentGoal
+@using DiscoverYourself.Models.Enums
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model DiscoverYourself.Models.RequestModels.DevelopmentGoalRequestModel
 
 @{
     Layout = null;
@@ -34,7 +36,7 @@
             <label asp-for="Category"></label>
             <select asp-for="Category" class="form-control">
                 <option value="">Select a Category</option>
-                @foreach (var category in Enum.GetValues(typeof(DiscoverYourself.Models.Enums.GoalCategory)))
+                @foreach (var category in Enum.GetValues(typeof(GoalCategory)))
                 {
                     <option value="@category">@category</option>
                 }
@@ -64,7 +66,7 @@
             <label asp-for="PriorityLevel"></label>
             <select asp-for="PriorityLevel" class="form-control">
                 <option value="">Select a Priority Level</option>
-                @foreach (var level in Enum.GetValues(typeof(DiscoverYourself.Models.Enums.PriorityLevel)))
+                @foreach (var level in Enum.GetValues(typeof(PriorityLevel)))
                 {
                     <option value="@level">@level</option>
                 }
