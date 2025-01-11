@@ -23,7 +23,7 @@ public class DevelopmentGoalsController : Controller
     
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Save(DevelopmentGoal model)
+    public IActionResult Create(DevelopmentGoal model)
     {
         if (!ModelState.IsValid)
         {
