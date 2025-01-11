@@ -1,18 +1,23 @@
 @model DiscoverYourself.Models.Entities.DevelopmentGoal
 
 @{
-    ViewData["Title"] = "Development Goal";
     Layout = null;
     var userId =  ViewBag.UserId;
 }
 
-<link rel="stylesheet" href="~/css/development_goals.css" asp-append-version="true">
+
+<head>
+    <title>Development Goals</title>
+    <link rel="stylesheet" href="~/css/development_goals.css" asp-append-version="true">
+</head>
 
 <div class="form-container">
-    <h2>Create Development Goal</h2>
+    <h2>Development Goal</h2>
     <form asp-action="Create" method="post">
+        
         @Html.AntiForgeryToken()
         <input type="hidden" id="userId" name="UserId" value="@userId">
+        
         <div class="form-group">
             <label asp-for="Title"></label>
             <input asp-for="Title" class="form-control"/>
