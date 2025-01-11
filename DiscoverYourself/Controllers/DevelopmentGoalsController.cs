@@ -23,7 +23,7 @@ public class DevelopmentGoalsController : Controller
     
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Create(DevelopmentGoal model)
+    public IActionResult Create(DevelopmentGoalRequestModel model)
     {
         if (!ModelState.IsValid)
         {
@@ -45,7 +45,7 @@ public class DevelopmentGoalsController : Controller
                 PriorityLevel = model.PriorityLevel,
                 ResourcesNeeded = model.ResourcesNeeded,
                 Feedback = model.Feedback,
-                UpdatedDate = model.UpdatedDate,
+                UpdatedDate = DateTime.Now,
                 UserId = userId
             };
             
