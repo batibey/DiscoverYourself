@@ -86,8 +86,25 @@
             <span asp-validation-for="Feedback" class="text-danger"></span>
         </div>
 
+        <div>
+            <label class="form-check-label" for="IsCompletedCheckbox">Is Complete</label>
+            <input type="hidden" name="IsCompleted" id="IsCompletedHidden" value="false"/>
+            <input type="checkbox"
+                   class="form-check-input"
+                   id="IsCompletedCheckbox"
+                   value="true"
+                   @(Model?.IsCompleted == true ? "checked" : "")/>
+
+        </div>
+
         <button type="submit" class="btn btn-primary">Save</button>
     </form>
 </div>
+
+<script>
+    document.getElementById("IsCompletedCheckbox").addEventListener("change", function () {
+        document.getElementById("IsCompletedHidden").value = this.checked ? "true" : "false";
+    });
+</script>
 
 
