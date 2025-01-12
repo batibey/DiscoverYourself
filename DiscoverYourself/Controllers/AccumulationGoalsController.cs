@@ -2,6 +2,7 @@ using DiscoverYourself.Data;
 using Microsoft.AspNetCore.Mvc;
 using DiscoverYourself.Models.Entities;
 using DiscoverYourself.Models.RequestModels;
+using DiscoverYourself.Services;
 
 namespace DiscoverYourself.Controllers;
 [Authorize]
@@ -9,11 +10,13 @@ public class AccumulationGoalsController : Controller
 {
     private readonly ILogger<AccumulationGoalsController> _logger;
     private readonly DiscoverYourselfDbContext _context;
+    private readonly IMailService _mailService;
 
-    public AccumulationGoalsController(ILogger<AccumulationGoalsController> logger, DiscoverYourselfDbContext context)
+    public AccumulationGoalsController(ILogger<AccumulationGoalsController> logger, DiscoverYourselfDbContext context, IMailService mailService)
     {
         _logger = logger;
         _context = context;
+        _mailService = mailService;
     }
     public IActionResult Index(int id)
     {
@@ -47,14 +50,13 @@ public class AccumulationGoalsController : Controller
             
             _context.InvestmentGoals.Add(investmentGoal);
             _context.SaveChanges();
-
-            TempData["SuccessMessage"] = "Birikim hedefleri başarıyla kaydedildi!";
+            _mailService.SendEmailAsync("mustafa.bati9@gmail.com", "Accumulation Saved", "Accumulation Saved Successfully");
+            
             return RedirectToAction("Index", new { id = userId });
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Hedef kaydı sırasında bir hata oluştu.");
-            TempData["ErrorMessage"] = "Hedef kaydı sırasında beklenmedik bir hata oluştu. Lütfen daha sonra tekrar deneyin.";
+            _logger.LogError(ex, "Error saving accumulation goal");
             return RedirectToAction("Index");
         }
     }
