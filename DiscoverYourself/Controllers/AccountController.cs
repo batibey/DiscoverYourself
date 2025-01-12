@@ -32,6 +32,7 @@ public class AccountController : Controller
 
         // Set session or token
         HttpContext.Session.SetString("UserId", user.Id.ToString());
+        HttpContext.Session.SetString("UserEmail", user.Email);
         Log.Information($"{user.Email} logged in.");
         return RedirectToAction("Index", "Home", user);
     }
