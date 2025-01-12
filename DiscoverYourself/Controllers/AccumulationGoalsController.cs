@@ -36,6 +36,7 @@ public class AccumulationGoalsController : Controller
         try
         {
             var userId = Convert.ToInt32(HttpContext.Session.GetString("UserId"));
+            var userEmail = Convert.ToInt32(HttpContext.Session.GetString("UserEmail"));
             var investmentGoal = new InvestmentGoal
             {
                 ActualSilver = model.ActualSilver,
@@ -50,7 +51,7 @@ public class AccumulationGoalsController : Controller
             
             _context.InvestmentGoals.Add(investmentGoal);
             _context.SaveChanges();
-            _mailService.SendEmailAsync("mustafa.bati9@gmail.com", "Accumulation Saved", "Accumulation Saved Successfully");
+            _mailService.SendEmailAsync(userEmail.ToString(), "Accumulation Saved", "Accumulation Saved Successfully");
             
             return RedirectToAction("Index", new { id = userId });
         }
