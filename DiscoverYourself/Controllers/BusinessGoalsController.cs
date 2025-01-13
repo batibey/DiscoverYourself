@@ -50,13 +50,12 @@ public class BusinessGoalsController : Controller
             };
             _context.BusinessGoals.Add(businessGoals);
             _context.SaveChanges();
-            _mailService.SendEmailAsync(userEmail.ToString(), "Business Goal Saved", "Accumulation Saved Successfully");
+            _mailService.SendEmailAsync(userEmail.ToString(), "Business Goal Saved", "Business Saved Successfully");
             return RedirectToAction("Index", new { id = userId });
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Hedef kaydı sırasında bir hata oluştu.");
-            TempData["ErrorMessage"] = "Hedef kaydı sırasında beklenmedik bir hata oluştu. Lütfen daha sonra tekrar deneyin.";
             return RedirectToAction("Index");
         }
     }

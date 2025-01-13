@@ -61,7 +61,6 @@ public class DevelopmentGoalsController : Controller
         catch (Exception ex)
         {
             _logger.LogError(ex, "Hedef kaydı sırasında bir hata oluştu.");
-            TempData["ErrorMessage"] = "Hedef kaydı sırasında beklenmedik bir hata oluştu. Lütfen daha sonra tekrar deneyin.";
             return RedirectToAction("Index");
         }
     }
