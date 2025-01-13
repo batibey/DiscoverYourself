@@ -51,7 +51,7 @@ public class AccumulationGoalsController : Controller
             
             _context.InvestmentGoals.Add(investmentGoal);
             _context.SaveChanges();
-            _mailService.SendEmailAsync(userEmail.ToString(), "Accumulation Saved", "Accumulation Saved Successfully");
+            _mailService.SendEmailAsync(userEmail.ToString(), "Accumulation Goal Saved", "Accumulation Saved Successfully");
             
             return RedirectToAction("Index", new { id = userId });
         }
