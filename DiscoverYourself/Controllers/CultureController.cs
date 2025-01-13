@@ -9,7 +9,7 @@ public class CultureController : Controller
     {
         if (string.IsNullOrEmpty(returnUrl))
         {
-            returnUrl = Url.Action("Index", "Home"); // Varsayılan yönlendirme
+            returnUrl = Url.Action("Index", "Home");
         }
 
         Response.Cookies.Append(
@@ -18,6 +18,6 @@ public class CultureController : Controller
             new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
         );
 
-        return LocalRedirect(returnUrl); // Kullanıcıyı aynı sayfaya yönlendir
+        return LocalRedirect(returnUrl);
     }
 }
