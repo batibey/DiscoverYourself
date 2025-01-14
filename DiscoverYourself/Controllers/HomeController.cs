@@ -18,7 +18,6 @@ public class HomeController : Controller
     }
     public async Task<IActionResult> Index(User user)
     {
-        await _mailService.SendEmailAsync("mustafa.bati9@gmail.com", "Test Subject", "This is a test email.");
         return View(user);
     }
     public IActionResult Privacy()
