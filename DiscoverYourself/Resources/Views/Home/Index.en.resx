@@ -39,4 +39,7 @@
     <data name="HomeMsg" xml:space="preserve">
         <value>Home</value>
     </data>
+    <data name="ReportsMsg" xml:space="preserve">
+        <value>Reports</value>
+    </data>
 </root>
