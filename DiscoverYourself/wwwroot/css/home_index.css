@@ -1,12 +1,18 @@
+/* Genel ayarlar */
 body {
     background: linear-gradient(135deg, #1e1f29, #2a2b3a);
     color: #fff;
     font-family: 'Roboto', sans-serif;
     padding: 20px;
+    margin: 0;
 }
 
-.header {
+.text-center {
     text-align: center;
+}
+
+/* Header bölümü */
+.header {
     margin-bottom: 30px;
 }
 
@@ -20,12 +26,7 @@ body {
     color: #aaa;
 }
 
-.blog-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
+/* Kullanıcı profili */
 .user-profile {
     text-align: center;
 }
@@ -37,6 +38,23 @@ body {
     margin-bottom: 15px;
 }
 
+/* Blog bölümündeki butonlar */
+.blog-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Reports butonunun ortalanması */
+.reports-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Buton stili */
 .target-btn {
     background: #0ef;
     color: #000;
@@ -45,8 +63,25 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s;
 }
 
 .target-btn:hover {
     background: #0cf;
+}
+
+/* Logout butonu */
+.logout-form .btn {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.logout-form .btn:hover {
+    background: #c0392b;
 }
