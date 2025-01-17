@@ -61,5 +61,31 @@ public class AccumulationGoalsController : Controller
             return RedirectToAction("Index");
         }
     }
+    
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Delete(int id)
+    {
+        try
+        {
+            var investmentGoal = _context.InvestmentGoals.FirstOrDefault(goal => goal.Id == id);
+        
+            if (investmentGoal == null)
+            {
+                return NotFound("The accumulation goal could not be found.");
+            }
+            
+            _context.InvestmentGoals.Remove(investmentGoal);
+            _context.SaveChanges();
+            
+            return RedirectToAction("Index", new { id = investmentGoal.UserId });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error deleting accumulation goal");
+            return RedirectToAction("Index");
+        }
+    }
+
 
 }
