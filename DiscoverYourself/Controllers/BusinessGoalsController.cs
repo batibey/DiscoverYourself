@@ -59,4 +59,30 @@ public class BusinessGoalsController : Controller
             return RedirectToAction("Index");
         }
     }
+    
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Delete(int id)
+    {
+        try
+        {
+            var businessGoal = _context.BusinessGoals.FirstOrDefault(goal => goal.Id == id);
+        
+            if (businessGoal == null)
+            {
+                return NotFound("The business goal could not be found.");
+            }
+        
+            _context.BusinessGoals.Remove(businessGoal);
+            _context.SaveChanges();
+        
+            return RedirectToAction("Index", new { id = businessGoal.UserId });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error deleting business goal");
+            return RedirectToAction("Index");
+        }
+    }
+
 }
