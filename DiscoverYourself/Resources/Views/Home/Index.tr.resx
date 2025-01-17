@@ -42,4 +42,7 @@
     <data name="ReportsMsg" xml:space="preserve">
         <value>Raporlar</value>
     </data>
+    <data name="DiscoverYourselfMsg" xml:space="preserve">
+        <value>Discover yourself by setting your goals and share them with the world!</value>
+    </data>
 </root>
