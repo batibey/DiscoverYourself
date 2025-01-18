@@ -64,5 +64,29 @@ public class DevelopmentGoalsController : Controller
             return RedirectToAction("Index");
         }
     }
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Delete(int id)
+    {
+        try
+        {
+            var developmentGoal = _context.DevelopmentGoals.FirstOrDefault(goal => goal.Id == id);
+        
+            if (developmentGoal == null)
+            {
+                return NotFound("The development goal could not be found.");
+            }
+            
+            _context.DevelopmentGoals.Remove(developmentGoal);
+            _context.SaveChanges();
+            
+            return RedirectToAction("Index", new { id = developmentGoal.UserId });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error deleting development goal");
+            return RedirectToAction("Index");
+        }
+    }
 
 }
