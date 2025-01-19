@@ -56,4 +56,29 @@ public class EducationGoalsController : Controller
 
         return RedirectToAction("Index", new { id = userId });
     }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Delete(int id)
+    {
+        try
+        {
+            var educationGoal = _context.EducationGoals.FirstOrDefault(goal => goal.Id == id);
+
+            if (educationGoal == null)
+            {
+                return NotFound("The education goal could not be found.");
+            }
+
+            _context.EducationGoals.Remove(educationGoal);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", new { id = educationGoal.UserId });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error deleting education goal");
+            return RedirectToAction("Index");
+        }
+    }
 }
