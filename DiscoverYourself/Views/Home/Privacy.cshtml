@@ -2,6 +2,10 @@
     Layout = null;
     ViewData["Title"] = "Privacy Policy";
 }
+<head>
+    <title>Privacy</title>
+    <link rel="stylesheet" href="~/css/privacy.css" asp-append-version="true">
+</head>
 <section class="privacy-policy d-flex align-items-center justify-content-center">
     <div class="container text-center p-5">
         <h1 class="mb-4" style="margin-top: 1rem;">Privacy Policy</h1>
@@ -62,54 +66,3 @@
         </div>
     </div>
 </section>
-
-<style>
-    html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-        font-family: Arial, sans-serif;
-        color: #fff;
-        overflow: auto;
-    }
-
-    .privacy-policy {
-        width: 100%;
-        max-width: 800px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        padding: 2rem;
-        margin: 2rem auto;
-    }
-
-    .privacy-policy h1 {
-        font-size: 2.5rem;
-        color: #00d4ff;
-    }
-
-    .privacy-policy h2 {
-        font-size: 1.75rem;
-        margin-top: 1.5rem;
-        color: #00c3ff;
-    }
-
-    .privacy-policy ul {
-        list-style-type: disc;
-        padding-left: 1.5rem;
-    }
-
-    .privacy-policy a {
-        text-decoration: none;
-        color: #fff;
-        background: #00d4ff;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        transition: background 0.3s;
-    }
-
-    .privacy-policy a:hover {
-        background: #009bcc;
-    }
-</style>
