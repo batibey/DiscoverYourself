@@ -1,14 +1,34 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
-@inject IViewLocalizer localizer
-
-@{
-    ViewData["Title"] = "Home Page";
+﻿@{
+    ViewData["Title"] = "Reports Page";
     Layout = null;
 }
+
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/reports.css" asp-append-version="true">
+    <title>Reports Page</title>
 </head>
-<div class="text-center">
-    REPORTS PAGE
+<body>
+<div class="header text-center">
+    <h1>Welcome to Your Reports</h1>
+    <p>Choose a report to view detailed insights</p>
 </div>
+
+<div class="report-buttons">
+    <button onclick="getReport('Accumulation')">Get My Accumulation Report</button>
+    <button onclick="getReport('Education')">Get My Education Report</button>
+    <button onclick="getReport('Development')">Get My Development Report</button>
+    <button onclick="getReport('Business')">Get My Business Report</button>
+</div>
+
+<script>
+    function getReport(reportType) {
+        alert(`Fetching ${reportType} report...`);
+    }
+</script>
+</body>
+</html>

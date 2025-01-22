@@ -1,0 +1,54 @@
+body {
+    background: linear-gradient(135deg, #1e1f29, #2a2b3a);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #0ef;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.report-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.report-buttons button {
+    background: #0ef;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.report-buttons button:hover {
+    background: #0cf;
+    transform: scale(1.05);
+}
+
+.report-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
