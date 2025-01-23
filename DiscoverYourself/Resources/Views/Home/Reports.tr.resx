@@ -18,4 +18,16 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="AccumulationReportMsg" xml:space="preserve">
+        <value>Birikim Raporu</value>
+    </data>
+    <data name="BusinessReportMsg" xml:space="preserve">
+        <value>İş Raporu</value>
+    </data>
+    <data name="EducationReportMsg" xml:space="preserve">
+        <value>Eğitim Raporu</value>
+    </data>
+    <data name="DevelopmentReportMsg" xml:space="preserve">
+        <value>Gelişim Raporu</value>
+    </data>
 </root>
