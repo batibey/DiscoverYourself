@@ -113,6 +113,8 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+builder.WebHost.UseUrls("http://0.0.0.0:5137");
+
 try
 {
     app.Run();
