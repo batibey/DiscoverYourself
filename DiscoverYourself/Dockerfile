@@ -6,10 +6,11 @@ EXPOSE 5137
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["DiscoverYourself/DiscoverYourself.csproj", "DiscoverYourself/"]
-RUN dotnet restore "DiscoverYourself/DiscoverYourself.csproj"
+# Correcting the path here
+COPY ["DiscoverYourself.csproj", "./"]
+RUN dotnet restore "DiscoverYourself.csproj"
 COPY . .
-WORKDIR "/src/DiscoverYourself"
+WORKDIR "/src"
 RUN dotnet build "DiscoverYourself.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
