@@ -77,7 +77,7 @@ builder.Services.AddTransient<IMailService, MailService>();
 var app = builder.Build();
 
 // Auto migrate
-app.MigrateDatabase<DiscoverYourselfDbContext>();
+//app.MigrateDatabase<DiscoverYourselfDbContext>();
 
 // Configure the HTTP request pipeline
 if (!app.Environment.IsDevelopment())
