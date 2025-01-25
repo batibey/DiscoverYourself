@@ -74,6 +74,12 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 builder.Services.AddTransient<IMailService, MailService>();
 
+// Configure Kestrel to listen on all IPs (0.0.0.0) on port 8080
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(8080); // Listen on all network interfaces on port 8080
+});
+
 var app = builder.Build();
 
 // Auto migrate
@@ -112,8 +118,6 @@ Log.Information("Application started.");
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-builder.WebHost.UseUrls("http://0.0.0.0:5137");
 
 try
 {
