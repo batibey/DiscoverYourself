@@ -1,6 +1,8 @@
 @using DiscoverYourself.Models.Enums
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 @model DiscoverYourself.Models.RequestModels.BusinessGoalRequestModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
 @{
     Layout = null;
     var userId =  ViewBag.UserId;
@@ -9,12 +11,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Business Goals</title>
+    <title>@localizer["BusinessGoals"]</title>
     <link rel="stylesheet" href="~/css/business_goals.css" asp-append-version="true">
 </head>
 <body>
 <div class="container">
-    <h1>Business Goals</h1>
+    <h1>@localizer["BusinessGoals"]</h1>
 
     <form action="/BusinessGoals/Save" method="post">
         @Html.AntiForgeryToken()
