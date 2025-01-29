@@ -1,6 +1,8 @@
 @using DiscoverYourself.Models.Enums
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 @model DiscoverYourself.Models.RequestModels.EducationGoalRequestModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
 @{
     Layout = null;
     var userId =  ViewBag.UserId;
@@ -9,12 +11,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Education Goals</title>
+    <title>@localizer["EducationGoalsMsg"]</title>
     <link rel="stylesheet" href="~/css/education_goals.css" asp-append-version="true">
 </head>
 <body>
 <div class="container">
-    <h1>Education Goals</h1>
+    <h1>@localizer["EducationGoalsMsg"]</h1>
 
     <form action="/EducationGoals/Save" method="post">
         @Html.AntiForgeryToken()

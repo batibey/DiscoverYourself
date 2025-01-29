@@ -44,5 +44,11 @@ namespace DiscoverYourself.Resources.Views.EducationGoals {
                 resourceCulture = value;
             }
         }
+        
+        internal static string EducationGoalsMsg {
+            get {
+                return ResourceManager.GetString("EducationGoalsMsg", resourceCulture);
+            }
+        }
     }
 }
