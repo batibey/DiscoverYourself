@@ -85,6 +85,14 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>Reports.tr.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\DevelopmentGoals\Index.en.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Index.en.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\DevelopmentGoals\Index.tr.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Index.tr.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -158,16 +166,22 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>Reports.tr.resx</DependentUpon>
       </Compile>
+      <Compile Update="Resources\Views\DevelopmentGoals\Index.en.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Index.en.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\DevelopmentGoals\Index.tr.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Index.tr.resx</DependentUpon>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Resources\Views\DevelopmentGoals\" />
     </ItemGroup>
 
 </Project>
