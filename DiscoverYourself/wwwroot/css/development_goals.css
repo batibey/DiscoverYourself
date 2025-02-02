@@ -1,7 +1,7 @@
-/* Genel stil ayarları */
+
 html, body {
-    height: 100%; /* Sayfa yüksekliğini tam olarak kapla */
-    overflow: auto; /* Taşan içeriğin kaydırılmasını sağla */
+    height: 100%; 
+    overflow: auto;
 }
 
 body {
@@ -9,20 +9,20 @@ body {
     background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: #ffffff;
     margin: 0;
-    padding: 20px; /* Kenar boşlukları ekle */
+    padding: 20px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* İçeriğin yukarıdan başlamasını sağla */
+    justify-content: flex-start;
 }
 
-/* Form kapsayıcı */
+
 .form-container {
     position: relative;
     max-width: 800px;
     width: 100%;
     padding: 30px;
-    margin-top: 50px; /* Üst boşluk ekledik */
+    margin-top: 50px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 10px;
@@ -31,14 +31,13 @@ body {
     animation: fadeIn 1s ease-out;
 }
 
-/* Başlık */
+
 .form-container h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #e0e0e0;
 }
 
-/* Form öğeleri */
 .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -74,13 +73,11 @@ input:focus, textarea:focus, select:focus {
     transform: scale(1.02);
 }
 
-/* Textarea */
 textarea {
     resize: none;
     min-height: 100px;
 }
 
-/* Buton */
 button {
     width: 100%;
     padding: 15px;
@@ -104,7 +101,6 @@ button:active {
     transform: scale(0.95);
 }
 
-/* Form kenarlık efekti */
 .form-container::before {
     content: '';
     position: absolute;
@@ -127,7 +123,6 @@ button:active {
     }
 }
 
-/* Fade-in animasyonu */
 @keyframes fadeIn {
     from {
         opacity: 0;

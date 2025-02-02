@@ -4,11 +4,11 @@ body {
     color: #ffffff;
     margin: 0;
     padding: 0;
-    height: 100%; /* Bu satırla yüksekliği artırıyoruz */
+    height: 100%; 
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Formu yukarıya yerleştiriyoruz */
-    padding-top: 40px; /* Sayfanın üst kısmına boşluk ekliyoruz */
+    align-items: flex-start; 
+    padding-top: 40px; 
 }
 
 h1 {
@@ -24,10 +24,10 @@ h1 {
     border-radius: 10px;
     padding: 30px;
     width: 100%;
-    max-width: 800px; /* Formun genişliğini arttırdık */
+    max-width: 800px; 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     margin: auto;
-    padding-bottom: 40px; /* Alt kısımda boşluk ekliyoruz */
+    padding-bottom: 40px; 
 }
 
 form {
@@ -45,8 +45,8 @@ input[type="date"],
 textarea,
 select {
     width: 100%;
-    padding: 15px; /* Paddingi arttırdık */
-    margin-bottom: 20px; /* Daha fazla boşluk ekledik */
+    padding: 15px; 
+    margin-bottom: 20px; 
     border: none;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.2);
@@ -64,7 +64,7 @@ textarea {
 
 button {
     width: 100%;
-    padding: 15px; /* Buton paddingi arttırdık */
+    padding: 15px; 
     background: linear-gradient(90deg, #ff8a00, #e52e71);
     border: none;
     border-radius: 5px;
@@ -83,7 +83,7 @@ button:active {
 }
 
 .form-group {
-    margin-bottom: 25px; /* Form elemanları arasındaki boşluğu arttırdık */
+    margin-bottom: 25px;
 }
 
 .form-check {
@@ -95,7 +95,6 @@ button:active {
     margin-left: 5px;
 }
 
-/* Fütürist Stil Dokunuşları */
 input, textarea, select {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     transition: box-shadow 0.3s ease;
@@ -128,15 +127,15 @@ form::before {
 }
 
 select.form-control {
-    appearance: auto; /* Varsayılan tarayıcı görünümünü etkinleştirir */
-    display: block; /* Varsayılan blok görüntüleme */
-    width: 100%; /* Tam genişlik sağlamak için */
-    height: auto; /* İçeriğe göre yüksekliği ayarlar */
-    padding: 15px; /* İçerik boşlukları */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Kenar çizgisi */
-    border-radius: 5px; /* Köşe yuvarlama */
-    background: rgba(255, 255, 255, 0.2); /* Arka plan şeffaflığı */
-    color: #ffffff; /* Yazı rengi */
-    outline: none; /* Çerçeve efektini kaldırır */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Hafif parlama */
+    appearance: auto; 
+    display: block; 
+    width: 100%; 
+    height: auto; 
+    padding: 15px; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 5px; 
+    background: rgba(255, 255, 255, 0.2); 
+    color: #ffffff; 
+    outline: none; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); 
 }
