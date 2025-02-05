@@ -33,4 +33,13 @@
     <data name="AccumulationReportDesc" xml:space="preserve">
         <value>Accumulation report provides an overview of financial growth.</value>
     </data>
+    <data name="EducationReportDesc" xml:space="preserve">
+        <value>Education report analyzes learning progress and achievements.</value>
+    </data>
+    <data name="DevelopmentReportDesc" xml:space="preserve">
+        <value>Development report tracks personal and professional improvements.</value>
+    </data>
+    <data name="BusinessReportDesc" xml:space="preserve">
+        <value>Business report gives insights into market trends and performance.</value>
+    </data>
 </root>
