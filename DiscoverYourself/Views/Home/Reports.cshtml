@@ -22,11 +22,27 @@
 </div>
 
 <div class="report-buttons">
-    <button onclick="getReport('Accumulation')">@localizer["AccumulationReportMsg"]</button>
-    <button onclick="getReport('Education')">@localizer["EducationReportMsg"]</button>
-    <button onclick="getReport('Development')">@localizer["DevelopmentReportMsg"]</button>
-    <button onclick="getReport('Business')">@localizer["BusinessReportMsg"]</button>
+    <div class="report-item">
+        <button onclick="getReport('Accumulation')">@localizer["AccumulationReportMsg"]</button>
+        <p class="report-description">@localizer["AccumulationReportDesc"]</p>
+    </div>
+
+    <div class="report-item">
+        <button onclick="getReport('Education')">@localizer["EducationReportMsg"]</button>
+        <p class="report-description">@localizer["EducationReportDesc"]</p>
+    </div>
+
+    <div class="report-item">
+        <button onclick="getReport('Development')">@localizer["DevelopmentReportMsg"]</button>
+        <p class="report-description">@localizer["DevelopmentReportDesc"]</p>
+    </div>
+
+    <div class="report-item">
+        <button onclick="getReport('Business')">@localizer["BusinessReportMsg"]</button>
+        <p class="report-description">@localizer["BusinessReportDesc"]</p>
+    </div>
 </div>
+
 
 <script>
     function getReport(reportType) {

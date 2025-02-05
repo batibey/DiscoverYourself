@@ -30,4 +30,7 @@
     <data name="DevelopmentReportMsg" xml:space="preserve">
         <value>Development Report</value>
     </data>
+    <data name="AccumulationReportDesc" xml:space="preserve">
+        <value>Accumulation report provides an overview of financial growth.</value>
+    </data>
 </root>
