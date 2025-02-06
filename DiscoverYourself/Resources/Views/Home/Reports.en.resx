@@ -45,4 +45,7 @@
     <data name="WelcomeToYourReportsMsg" xml:space="preserve">
         <value>Welcome to Your Reports</value>
     </data>
+    <data name="ChooseReportsMsg" xml:space="preserve">
+        <value>Choose a report to view detailed insights</value>
+    </data>
 </root>

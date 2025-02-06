@@ -45,4 +45,7 @@
     <data name="WelcomeToYourReportsMsg" xml:space="preserve">
         <value>Rapor Sayfanıza Hoşgeldiniz</value>
     </data>
+    <data name="ChooseReportsMsg" xml:space="preserve">
+        <value>Detayını görüntülemek istediğin raporu seç</value>
+    </data>
 </root>
