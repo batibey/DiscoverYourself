@@ -42,4 +42,7 @@
     <data name="BusinessReportDesc" xml:space="preserve">
         <value>Business report gives insights into market trends and performance.</value>
     </data>
+    <data name="WelcomeToYourReportsMsg" xml:space="preserve">
+        <value>Rapor Sayfanıza Hoşgeldiniz</value>
+    </data>
 </root>

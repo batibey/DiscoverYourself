@@ -92,5 +92,11 @@ namespace DiscoverYourself.Resources.Views.Home {
                 return ResourceManager.GetString("BusinessReportDesc", resourceCulture);
             }
         }
+        
+        internal static string WelcomeToYourReportsMsg {
+            get {
+                return ResourceManager.GetString("WelcomeToYourReportsMsg", resourceCulture);
+            }
+        }
     }
 }
