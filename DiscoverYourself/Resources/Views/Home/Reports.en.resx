@@ -48,4 +48,7 @@
     <data name="ChooseReportsMsg" xml:space="preserve">
         <value>Choose a report to view detailed insights</value>
     </data>
+    <data name="ReportsPageMsg" xml:space="preserve">
+        <value>Reports Page</value>
+    </data>
 </root>

@@ -104,5 +104,11 @@ namespace DiscoverYourself.Resources.Views.Home {
                 return ResourceManager.GetString("ChooseReportsMsg", resourceCulture);
             }
         }
+        
+        internal static string ReportsPageMsg {
+            get {
+                return ResourceManager.GetString("ReportsPageMsg", resourceCulture);
+            }
+        }
     }
 }
