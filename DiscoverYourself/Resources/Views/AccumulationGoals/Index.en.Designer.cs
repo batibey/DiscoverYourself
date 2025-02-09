@@ -134,5 +134,11 @@ namespace DiscoverYourself.Resources.Views.AccumulationGoals {
                 return ResourceManager.GetString("Currency", resourceCulture);
             }
         }
+        
+        internal static string EnterQuantityMsg {
+            get {
+                return ResourceManager.GetString("EnterQuantityMsg", resourceCulture);
+            }
+        }
     }
 }

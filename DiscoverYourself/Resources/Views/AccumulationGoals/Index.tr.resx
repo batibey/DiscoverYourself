@@ -63,4 +63,7 @@
     <data name="SilverMsg" xml:space="preserve">
         <value>Gümüş</value>
     </data>
+    <data name="EnterQuantityMsg" xml:space="preserve">
+        <value>Miktarı Girin</value>
+    </data>
 </root>

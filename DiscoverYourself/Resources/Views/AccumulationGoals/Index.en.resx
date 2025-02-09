@@ -63,4 +63,7 @@
     <data name="Currency" xml:space="preserve">
         <value>Currency</value>
     </data>
+    <data name="EnterQuantityMsg" xml:space="preserve">
+        <value>Enter Quantity</value>
+    </data>
 </root>
