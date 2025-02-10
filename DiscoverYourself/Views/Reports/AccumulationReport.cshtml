@@ -1,0 +1,39 @@
+﻿@model List<DiscoverYourself.Models.Entities.InvestmentGoal>
+
+@{
+    ViewData["Title"] = "Accumulation Report Page";
+    Layout = null;
+}
+<head>
+    <title>Accumulation Report Page</title>
+    <link rel="stylesheet" href="~/css/accumulation_report.css" asp-append-version="true">
+</head>
+<h2>Accumulation Report</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Target Currency</th>
+        <th>Actual Currency</th>
+        <th>Target Gold</th>
+        <th>Actual Gold</th>
+        <th>Target Silver</th>
+        <th>Actual Silver</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var investment in Model)
+    {
+        <tr>
+            <td>@investment.Date.ToShortDateString()</td>
+            <td>@investment.TargetCurrency</td>
+            <td>@investment.ActualCurrency</td>
+            <td>@investment.TargetGold</td>
+            <td>@investment.ActualGold</td>
+            <td>@investment.TargetSilver</td>
+            <td>@investment.ActualSilver</td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -23,7 +23,7 @@
 
 <div class="report-buttons">
     <div class="report-item">
-        <button onclick="getReport('Accumulation')">@localizer["AccumulationReportMsg"]</button>
+        <button id="accumulationReportBtn">@localizer["AccumulationReportMsg"]</button>
         <p class="report-description">@localizer["AccumulationReportDesc"]</p>
     </div>
 
@@ -42,12 +42,21 @@
         <p class="report-description">@localizer["BusinessReportDesc"]</p>
     </div>
 </div>
-
+<div id="reportContainer" data-userid="@ViewBag.UserId"></div>
 
 <script>
-    function getReport(reportType) {
-        alert(`Fetching ${reportType} report...`);
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("accumulationReportBtn").addEventListener("click", function () {
+            var userId = document.getElementById("reportContainer").getAttribute("data-userid");
+
+            if (!userId) {
+                alert("User not found!");
+                return;
+            }
+
+            window.location.href = "/Reports/GetAccumulationReportByUserId?userId=" + userId;
+        });
+    });
 </script>
 </body>
 </html>
