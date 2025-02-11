@@ -101,6 +101,14 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>Privacy.en.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\Reports\AccumulationReport.en.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>AccumulationReport.en.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\Reports\AccumulationReport.tr.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>AccumulationReport.tr.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -193,6 +201,16 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>Privacy.en.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\Reports\AccumulationReport.en.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>AccumulationReport.en.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\Reports\AccumulationReport.tr.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>AccumulationReport.tr.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 
