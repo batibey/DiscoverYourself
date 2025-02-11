@@ -2,12 +2,10 @@
 @using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer localizer
 
-@{
-    ViewData["Title"] = "Accumulation Report Page";
-    Layout = null;
-}
+@{ Layout = null; }
+
 <head>
-    <title>@localizer["AccumulationReportMsg"] Page</title>
+    <title>@localizer["AccumulationReportPageMsg"]</title>
     <link rel="stylesheet" href="~/css/accumulation_report.css" asp-append-version="true">
 </head>
 <h2>@localizer["AccumulationReportMsg"]</h2>

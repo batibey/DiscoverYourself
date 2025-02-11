@@ -42,4 +42,7 @@
     <data name="ActualSilverMsg" xml:space="preserve">
         <value>Actual Silver</value>
     </data>
+    <data name="AccumulationReportPageMsg" xml:space="preserve">
+        <value>Accumulation Report Page</value>
+    </data>
 </root>

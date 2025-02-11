@@ -92,5 +92,11 @@ namespace DiscoverYourself.Resources.Views.Reports {
                 return ResourceManager.GetString("TargetSilverMsg", resourceCulture);
             }
         }
+        
+        internal static string AccumulationReportPageMsg {
+            get {
+                return ResourceManager.GetString("AccumulationReportPageMsg", resourceCulture);
+            }
+        }
     }
 }

@@ -42,4 +42,7 @@
     <data name="TargetSilverMsg" xml:space="preserve">
         <value>Hedeflenen Gümüş Yatırımı</value>
     </data>
+    <data name="AccumulationReportPageMsg" xml:space="preserve">
+        <value>Yatırım Rapor Sayfası</value>
+    </data>
 </root>
