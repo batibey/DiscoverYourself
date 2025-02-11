@@ -18,4 +18,28 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="AccumulationReportMsg" xml:space="preserve">
+        <value>Yatırım Raporu</value>
+    </data>
+    <data name="DateMsg" xml:space="preserve">
+        <value>Tarih</value>
+    </data>
+    <data name="ActualCurrencyMsg" xml:space="preserve">
+        <value>Gerçekleşen Döviz Yatırımı</value>
+    </data>
+    <data name="TargetCurrencyMsg" xml:space="preserve">
+        <value>Hedeflenen Döviz Yatırımı</value>
+    </data>
+    <data name="ActualGoldMsg" xml:space="preserve">
+        <value>Gerçekleşen Altın Yatırımı</value>
+    </data>
+    <data name="TargetGoldMsg" xml:space="preserve">
+        <value>Hedeflenen Altın Yatırımı</value>
+    </data>
+    <data name="ActualSilverMsg" xml:space="preserve">
+        <value>Gerçekleşen Gümüş Yatırımı</value>
+    </data>
+    <data name="TargetSilverMsg" xml:space="preserve">
+        <value>Hedeflenen Gümüş Yatırımı</value>
+    </data>
 </root>

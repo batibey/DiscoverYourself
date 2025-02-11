@@ -18,4 +18,28 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="AccumulationReportMsg" xml:space="preserve">
+        <value>Accumulation Report</value>
+    </data>
+    <data name="DateMsg" xml:space="preserve">
+        <value>Date</value>
+    </data>
+    <data name="TargetCurrencyMsg" xml:space="preserve">
+        <value>Target Currency</value>
+    </data>
+    <data name="ActualCurrencyMsg" xml:space="preserve">
+        <value>Actual Currency</value>
+    </data>
+    <data name="TargetGoldMsg" xml:space="preserve">
+        <value>Target Gold</value>
+    </data>
+    <data name="ActualGoldMsg" xml:space="preserve">
+        <value>Actual Gold</value>
+    </data>
+    <data name="TargetSilverMsg" xml:space="preserve">
+        <value>Target Silver</value>
+    </data>
+    <data name="ActualSilverMsg" xml:space="preserve">
+        <value>Actual Silver</value>
+    </data>
 </root>

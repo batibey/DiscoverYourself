@@ -44,5 +44,53 @@ namespace DiscoverYourself.Resources.Views.Reports {
                 resourceCulture = value;
             }
         }
+        
+        internal static string AccumulationReportMsg {
+            get {
+                return ResourceManager.GetString("AccumulationReportMsg", resourceCulture);
+            }
+        }
+        
+        internal static string DateMsg {
+            get {
+                return ResourceManager.GetString("DateMsg", resourceCulture);
+            }
+        }
+        
+        internal static string ActualCurrencyMsg {
+            get {
+                return ResourceManager.GetString("ActualCurrencyMsg", resourceCulture);
+            }
+        }
+        
+        internal static string TargetCurrencyMsg {
+            get {
+                return ResourceManager.GetString("TargetCurrencyMsg", resourceCulture);
+            }
+        }
+        
+        internal static string ActualGoldMsg {
+            get {
+                return ResourceManager.GetString("ActualGoldMsg", resourceCulture);
+            }
+        }
+        
+        internal static string TargetGoldMsg {
+            get {
+                return ResourceManager.GetString("TargetGoldMsg", resourceCulture);
+            }
+        }
+        
+        internal static string ActualSilverMsg {
+            get {
+                return ResourceManager.GetString("ActualSilverMsg", resourceCulture);
+            }
+        }
+        
+        internal static string TargetSilverMsg {
+            get {
+                return ResourceManager.GetString("TargetSilverMsg", resourceCulture);
+            }
+        }
     }
 }
