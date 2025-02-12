@@ -1,0 +1,27 @@
+﻿@model List<DiscoverYourself.Models.Entities.BusinessGoal>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+@{ Layout = null; }
+
+<head>
+    <title>@localizer["AccumulationReportPageMsg"]</title>
+    <link rel="stylesheet" href="~/css/business_report.css" asp-append-version="true">
+</head>
+<h2></h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var business in Model)
+    {
+        <tr>
+            <td>@business.StartDate.ToShortDateString()</td>
+        </tr>
+    }
+    </tbody>
+</table>
