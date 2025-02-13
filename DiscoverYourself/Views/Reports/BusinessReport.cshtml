@@ -8,12 +8,18 @@
     <title>@localizer["AccumulationReportPageMsg"]</title>
     <link rel="stylesheet" href="~/css/business_report.css" asp-append-version="true">
 </head>
-<h2></h2>
+<h2>Business Report</h2>
 
 <table class="table">
     <thead>
     <tr>
-        <th></th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Tasks Completed</th>
+        <th>Task Type</th>
+        <th>Daily Work Hours</th>
+        <th>Daily Self Development Hours</th>
+        <th>Additional Info</th>
     </tr>
     </thead>
     <tbody>
@@ -21,6 +27,12 @@
     {
         <tr>
             <td>@business.StartDate.ToShortDateString()</td>
+            <td>@business.EndDate.ToShortDateString()</td>
+            <td>@business.TasksCompleted</td>
+            <td>@business.TaskType.ToString()</td>
+            <td>@business.DailyWorkHours</td>
+            <td>@business.DailySelfDevelopmentHours</td>
+            <td>@business.AdditionalInfo</td>
         </tr>
     }
     </tbody>
