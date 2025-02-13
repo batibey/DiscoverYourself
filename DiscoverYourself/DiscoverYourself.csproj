@@ -109,6 +109,14 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>AccumulationReport.tr.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\Reports\BusinessReport.en.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>BusinessReport.en.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\Reports\BusinessReport.tr.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>BusinessReport.tr.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -211,6 +219,16 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>AccumulationReport.tr.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\Reports\BusinessReport.en.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>BusinessReport.en.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\Reports\BusinessReport.tr.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>BusinessReport.tr.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 
