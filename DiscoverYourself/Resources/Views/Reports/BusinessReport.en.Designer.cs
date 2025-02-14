@@ -44,5 +44,11 @@ namespace DiscoverYourself.Resources.Views.Reports {
                 resourceCulture = value;
             }
         }
+        
+        internal static string BusinessReportMsg {
+            get {
+                return ResourceManager.GetString("BusinessReportMsg", resourceCulture);
+            }
+        }
     }
 }
