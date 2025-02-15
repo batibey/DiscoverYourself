@@ -21,4 +21,25 @@
     <data name="BusinessReportMsg" xml:space="preserve">
         <value>Business Report</value>
     </data>
+    <data name="StartDateMsg" xml:space="preserve">
+        <value>Start Date</value>
+    </data>
+    <data name="EndDateMsg" xml:space="preserve">
+        <value>End Date</value>
+    </data>
+    <data name="TaskCompletedMsg" xml:space="preserve">
+        <value>Task Completed</value>
+    </data>
+    <data name="TaskTypeMsg" xml:space="preserve">
+        <value>Task Type</value>
+    </data>
+    <data name="DailyWorkHoursMsg" xml:space="preserve">
+        <value>Daily Work Hours</value>
+    </data>
+    <data name="DailySelfDevelopmentHoursMsg" xml:space="preserve">
+        <value>Daily Self Development Hours</value>
+    </data>
+    <data name="AdditionalInfoMsg" xml:space="preserve">
+        <value>Additional Info</value>
+    </data>
 </root>

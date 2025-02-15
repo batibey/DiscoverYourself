@@ -21,4 +21,25 @@
     <data name="BusinessReportMsg" xml:space="preserve">
         <value>İş Raporu</value>
     </data>
+    <data name="StartDateMsg" xml:space="preserve">
+        <value>Başlangıç Tarihi</value>
+    </data>
+    <data name="EndDateMsg" xml:space="preserve">
+        <value>Bitiş Tarihi</value>
+    </data>
+    <data name="TaskCompletedMsg" xml:space="preserve">
+        <value>Görev Tamamlanış</value>
+    </data>
+    <data name="TaskTypeMsg" xml:space="preserve">
+        <value>Görev Tipi</value>
+    </data>
+    <data name="DailyWorkHoursMsg" xml:space="preserve">
+        <value>Günlük Çalışma Saati</value>
+    </data>
+    <data name="DailySelfDevelopmentHoursMsg" xml:space="preserve">
+        <value>Günlük Geliştirme Saati</value>
+    </data>
+    <data name="AdditionalInfoMsg" xml:space="preserve">
+        <value>Opsiyonel Bilgiler</value>
+    </data>
 </root>
