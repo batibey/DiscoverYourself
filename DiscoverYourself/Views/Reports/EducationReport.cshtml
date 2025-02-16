@@ -1,0 +1,29 @@
+﻿@model List<DiscoverYourself.Models.Entities.EducationGoal>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+@{ Layout = null; }
+
+<head>
+    <title>Education Report</title>
+    <link rel="stylesheet" href="~/css/education_report.css" asp-append-version="true">
+</head>
+<h2>Education Report</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Start Date</th>
+        <th>End Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var education in Model)
+    {
+        <tr>
+            <td>@education.StartDate.ToShortDateString()</td>
+            <td>@education.EndDate.ToShortDateString()</td>
+        </tr>
+    }
+    </tbody>
+</table>
