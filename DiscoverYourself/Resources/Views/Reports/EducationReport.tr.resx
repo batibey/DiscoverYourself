@@ -18,4 +18,13 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="EducationReportMsg" xml:space="preserve">
+        <value>Eğitim Raporu</value>
+    </data>
+    <data name="EndDateMsg" xml:space="preserve">
+        <value>Bitiş Tarihi</value>
+    </data>
+    <data name="StartDateMsg" xml:space="preserve">
+        <value>Başlangıç tarihi</value>
+    </data>
 </root>

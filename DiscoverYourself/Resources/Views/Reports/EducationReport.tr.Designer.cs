@@ -44,5 +44,23 @@ namespace DiscoverYourself.Resources.Views.Reports {
                 resourceCulture = value;
             }
         }
+        
+        internal static string EducationReportMsg {
+            get {
+                return ResourceManager.GetString("EducationReportMsg", resourceCulture);
+            }
+        }
+        
+        internal static string EndDateMsg {
+            get {
+                return ResourceManager.GetString("EndDateMsg", resourceCulture);
+            }
+        }
+        
+        internal static string StartDateMsg {
+            get {
+                return ResourceManager.GetString("StartDateMsg", resourceCulture);
+            }
+        }
     }
 }
