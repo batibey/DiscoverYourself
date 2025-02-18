@@ -15,6 +15,14 @@
     <tr>
         <th>@localizer["StartDateMsg"]</th>
         <th>@localizer["EndDateMsg"]</th>
+        <th>@localizer["TitleMsg"]</th>
+        <th>@localizer["DescriptionMsg"]</th>
+        <th>@localizer["TopicsMsg"]</th>
+        <th>@localizer["DifficultyMsg"]</th>
+        <th>@localizer["TargetAudienceMsg"]</th>
+        <th>@localizer["MilestonesMsg"]</th>
+        <th>@localizer["SuccessCriteriaMsg"]</th>
+        <th>@localizer["IsCompletedMsg"]</th>
     </tr>
     </thead>
     <tbody>
@@ -23,6 +31,14 @@
         <tr>
             <td>@education.StartDate.ToShortDateString()</td>
             <td>@education.EndDate.ToShortDateString()</td>
+            <td>@education.Title</td>
+            <td>@education.Description</td>
+            <td>@education.Topics</td>
+            <td>@education.Difficulty</td>
+            <td>@education.TargetAudience</td>
+            <td>@education.Milestones</td>
+            <td>@education.SuccessCriteria</td>
+            <td>@education.IsCompleted</td>
         </tr>
     }
     </tbody>
