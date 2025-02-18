@@ -62,5 +62,53 @@ namespace DiscoverYourself.Resources.Views.Reports {
                 return ResourceManager.GetString("StartDateMsg", resourceCulture);
             }
         }
+        
+        internal static string DescriptionMsg {
+            get {
+                return ResourceManager.GetString("DescriptionMsg", resourceCulture);
+            }
+        }
+        
+        internal static string DifficultyMsg {
+            get {
+                return ResourceManager.GetString("DifficultyMsg", resourceCulture);
+            }
+        }
+        
+        internal static string IsCompletedMsg {
+            get {
+                return ResourceManager.GetString("IsCompletedMsg", resourceCulture);
+            }
+        }
+        
+        internal static string MilestonesMsg {
+            get {
+                return ResourceManager.GetString("MilestonesMsg", resourceCulture);
+            }
+        }
+        
+        internal static string SuccessCriteriaMsg {
+            get {
+                return ResourceManager.GetString("SuccessCriteriaMsg", resourceCulture);
+            }
+        }
+        
+        internal static string TargetAudienceMsg {
+            get {
+                return ResourceManager.GetString("TargetAudienceMsg", resourceCulture);
+            }
+        }
+        
+        internal static string TitleMsg {
+            get {
+                return ResourceManager.GetString("TitleMsg", resourceCulture);
+            }
+        }
+        
+        internal static string TopicsMsg {
+            get {
+                return ResourceManager.GetString("TopicsMsg", resourceCulture);
+            }
+        }
     }
 }

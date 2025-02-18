@@ -27,4 +27,28 @@
     <data name="StartDateMsg" xml:space="preserve">
         <value>Başlangıç tarihi</value>
     </data>
+    <data name="DescriptionMsg" xml:space="preserve">
+        <value>Açıklama</value>
+    </data>
+    <data name="DifficultyMsg" xml:space="preserve">
+        <value>Zorluk</value>
+    </data>
+    <data name="IsCompletedMsg" xml:space="preserve">
+        <value>Tamamlandı mı</value>
+    </data>
+    <data name="MilestonesMsg" xml:space="preserve">
+        <value>Ara adımlar</value>
+    </data>
+    <data name="SuccessCriteriaMsg" xml:space="preserve">
+        <value>Başarı Ölçütü</value>
+    </data>
+    <data name="TargetAudienceMsg" xml:space="preserve">
+        <value>Hedef Kitle</value>
+    </data>
+    <data name="TitleMsg" xml:space="preserve">
+        <value>Başlık</value>
+    </data>
+    <data name="TopicsMsg" xml:space="preserve">
+        <value>Konu</value>
+    </data>
 </root>
