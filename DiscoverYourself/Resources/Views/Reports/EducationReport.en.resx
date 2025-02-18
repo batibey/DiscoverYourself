@@ -27,4 +27,28 @@
     <data name="EducationReportMsg" xml:space="preserve">
         <value>Education Report</value>
     </data>
+    <data name="TitleMsg" xml:space="preserve">
+        <value />
+    </data>
+    <data name="DescriptionMsg" xml:space="preserve">
+        <value />
+    </data>
+    <data name="TopicsMsg" xml:space="preserve">
+        <value />
+    </data>
+    <data name="DifficultyMsg" xml:space="preserve">
+        <value />
+    </data>
+    <data name="TargetAudienceMsg" xml:space="preserve">
+        <value />
+    </data>
+    <data name="MilestonesMsg" xml:space="preserve">
+        <value />
+    </data>
+    <data name="SuccessCriteriaMsg" xml:space="preserve">
+        <value />
+    </data>
+    <data name="IsCompletedMsg" xml:space="preserve">
+        <value />
+    </data>
 </root>
