@@ -12,18 +12,16 @@ public class EducationGoal
     public string Description { get; set; }
     public DateTime StartDate { get; set; } 
     public DateTime EndDate { get; set; } 
-    public enmTopics Topics { get; set; } // Hedefte ele alınacak konular
-    public enmDifficultyLevel Difficulty { get; set; } // Hedefin zorluk seviyesi
-    public string TargetAudience { get; set; } // Hedeflenen kitle
-    public string Milestones { get; set; } // Hedefe ulaşmak için belirlenen ara adımlar
-    public string SuccessCriteria { get; set; } // Hedefin başarı ölçütü (Örn: Bir sertifika almak)
+    public enmTopics Topics { get; set; } 
+    public enmDifficultyLevel Difficulty { get; set; } 
+    public string TargetAudience { get; set; } 
+    public string Milestones { get; set; } 
+    public string SuccessCriteria { get; set; } 
     public bool IsCompleted { get; set; } 
     
-    // Foreign key
     [Required]
     public int UserId { get; set; }
-
-    // Navigation property
+    
     [ForeignKey("UserId")]
     public User User { get; set; } = null!;
 }
