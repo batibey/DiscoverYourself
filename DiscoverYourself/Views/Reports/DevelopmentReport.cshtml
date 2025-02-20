@@ -1,0 +1,27 @@
+﻿@model List<DiscoverYourself.Models.Entities.DevelopmentGoal>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+@{ Layout = null; }
+
+<head>
+    <title>@localizer["DevelopmentReportMsg"]</title>
+    <link rel="stylesheet" href="~/css/development_report.css" asp-append-version="true">
+</head>
+<h2>@localizer["DevelopmentReportMsg"]</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var development in Model)
+    {
+        <tr>
+
+        </tr>
+    }
+    </tbody>
+</table>
