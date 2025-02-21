@@ -125,6 +125,14 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>EducationReport.tr.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\Reports\DevelopmentReports.tr.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>DevelopmentReports.tr.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\Reports\DevelopmentReports.en.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>DevelopmentReports.en.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -247,6 +255,16 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>EducationReport.tr.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\Reports\DevelopmentReports.tr.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>DevelopmentReports.tr.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\Reports\DevelopmentReports.en.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>DevelopmentReports.en.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 
