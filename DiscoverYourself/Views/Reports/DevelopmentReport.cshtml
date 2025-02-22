@@ -13,14 +13,16 @@
 <table class="table">
     <thead>
     <tr>
-
+        <th>@localizer["StartDateMsg"]</th>
+        <th>@localizer["EndDateMsg"]</th>
     </tr>
     </thead>
     <tbody>
     @foreach (var development in Model)
     {
         <tr>
-
+            <td>@development.StartDate.ToShortDateString()</td>
+            <td>@development.EndDate?.ToShortDateString()</td>
         </tr>
     }
     </tbody>
