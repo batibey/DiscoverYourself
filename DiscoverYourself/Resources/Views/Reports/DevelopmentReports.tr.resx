@@ -21,4 +21,10 @@
     <data name="DevelopmentReportMsg" xml:space="preserve">
         <value>Gelişim Raporu</value>
     </data>
+    <data name="CategoryMsg" xml:space="preserve">
+        <value>Kategori</value>
+    </data>
+    <data name="DescriptionMsg" xml:space="preserve">
+        <value>Açıklama</value>
+    </data>
 </root>

@@ -50,5 +50,17 @@ namespace DiscoverYourself.Resources.Views.Reports {
                 return ResourceManager.GetString("DevelopmentReportMsg", resourceCulture);
             }
         }
+        
+        internal static string CategoryMsg {
+            get {
+                return ResourceManager.GetString("CategoryMsg", resourceCulture);
+            }
+        }
+        
+        internal static string DescriptionMsg {
+            get {
+                return ResourceManager.GetString("DescriptionMsg", resourceCulture);
+            }
+        }
     }
 }

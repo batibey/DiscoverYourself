@@ -21,4 +21,10 @@
     <data name="DevelopmentReportMsg" xml:space="preserve">
         <value>Development Report</value>
     </data>
+    <data name="DescriptionMsg" xml:space="preserve">
+        <value>Description</value>
+    </data>
+    <data name="CategoryMsg" xml:space="preserve">
+        <value>Category</value>
+    </data>
 </root>
