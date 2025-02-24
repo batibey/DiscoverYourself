@@ -27,4 +27,10 @@
     <data name="DescriptionMsg" xml:space="preserve">
         <value>Açıklama</value>
     </data>
+    <data name="ProgressMsg" xml:space="preserve">
+        <value>İlerleme Durumu</value>
+    </data>
+    <data name="TitleMsg" xml:space="preserve">
+        <value>Başlık</value>
+    </data>
 </root>

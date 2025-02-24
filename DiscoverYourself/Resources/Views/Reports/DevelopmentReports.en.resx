@@ -27,4 +27,10 @@
     <data name="CategoryMsg" xml:space="preserve">
         <value>Category</value>
     </data>
+    <data name="TitleMsg" xml:space="preserve">
+        <value>Title</value>
+    </data>
+    <data name="ProgressMsg" xml:space="preserve">
+        <value>Progress</value>
+    </data>
 </root>

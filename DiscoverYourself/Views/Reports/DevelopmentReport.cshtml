@@ -17,6 +17,8 @@
         <th>@localizer["EndDateMsg"]</th>
         <th>@localizer["CategoryMsg"]</th>
         <th>@localizer["DescriptionMsg"]</th>
+        <th>@localizer["TitleMsg"]</th>
+        <th>@localizer["ProgressMsg"]</th>
     </tr>
     </thead>
     <tbody>
@@ -27,6 +29,8 @@
             <td>@development.EndDate?.ToShortDateString()</td>
             <td>@development.Category</td>
             <td>@development.Description</td>
+            <td>@development.Title</td>
+            <td>@development.Progress</td>
         </tr>
     }
     </tbody>
