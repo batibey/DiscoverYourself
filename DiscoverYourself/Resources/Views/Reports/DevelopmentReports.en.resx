@@ -33,4 +33,10 @@
     <data name="ProgressMsg" xml:space="preserve">
         <value>Progress</value>
     </data>
+    <data name="PriorityLevelMsg" xml:space="preserve">
+        <value>Priority level</value>
+    </data>
+    <data name="ResourcesNeededMsg" xml:space="preserve">
+        <value>Resources Needed</value>
+    </data>
 </root>

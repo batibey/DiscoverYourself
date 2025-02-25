@@ -33,4 +33,10 @@
     <data name="TitleMsg" xml:space="preserve">
         <value>Başlık</value>
     </data>
+    <data name="PriorityLevelMsg" xml:space="preserve">
+        <value>Önem Derecesi</value>
+    </data>
+    <data name="ResourcesNeededMsg" xml:space="preserve">
+        <value>Gerekli kaynaklar</value>
+    </data>
 </root>
