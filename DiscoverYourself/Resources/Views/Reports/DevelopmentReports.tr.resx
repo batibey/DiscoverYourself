@@ -39,4 +39,7 @@
     <data name="ResourcesNeededMsg" xml:space="preserve">
         <value>Gerekli kaynaklar</value>
     </data>
+    <data name="FeedbackMsg" xml:space="preserve">
+        <value>Geri Dönüt</value>
+    </data>
 </root>
