@@ -42,4 +42,7 @@
     <data name="FeedbackMsg" xml:space="preserve">
         <value>Geri Dönüt</value>
     </data>
+    <data name="CreatedDateMsg" xml:space="preserve">
+        <value>Oluşturulma Tarihi</value>
+    </data>
 </root>

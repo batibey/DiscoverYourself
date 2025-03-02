@@ -42,4 +42,7 @@
     <data name="FeedbackMsg" xml:space="preserve">
         <value>Feedback</value>
     </data>
+    <data name="CreatedDateMsg" xml:space="preserve">
+        <value>Created Date</value>
+    </data>
 </root>

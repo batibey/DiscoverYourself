@@ -92,5 +92,11 @@ namespace DiscoverYourself.Resources.Views.Reports {
                 return ResourceManager.GetString("FeedbackMsg", resourceCulture);
             }
         }
+        
+        internal static string CreatedDateMsg {
+            get {
+                return ResourceManager.GetString("CreatedDateMsg", resourceCulture);
+            }
+        }
     }
 }
